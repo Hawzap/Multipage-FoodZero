@@ -1,0 +1,2046 @@
+@use "./mixins" as *;
+
+// ===== PRELOADER =====
+
+.preloader {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+    .bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        min-height: 350%;
+        z-index: 5;
+        background-color: #233000;
+    }
+
+    .titleWrapper {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        z-index: 6;
+        transform: translate(-50%, -50%);
+        .ghostTitle {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-weight: 700;
+            opacity: 0;
+            visibility: hidden;
+        }
+        .mainLinePr {
+            display: block;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 250px;
+            height: 2px;
+            background-color: #fff;
+            transform-origin: center;
+            .subLinePr {
+                position: absolute;
+                display: block;
+                height: 20px;
+                width: 2px;
+                background-color: #fff;
+            }
+            &:first-child {
+                top: -15px;
+                .subLinePr {
+                    transform-origin: top;
+                }
+                .subLinePr:first-child {
+                    left: 0;
+                }
+                .subLinePr:last-child {
+                    right: 0;
+                }
+            }
+            &:last-child {
+                top: auto;
+                bottom: -16px;
+                .subLinePr {
+                    transform-origin: bottom;
+                    bottom: 100%;
+                }
+                .subLinePr:first-child {
+                    left: 0;
+                }
+                .subLinePr:last-child {
+                    right: 0;
+                }
+            }
+        }
+
+        .preloaderTitleWrapper {
+            overflow: hidden;
+            display: flex;
+
+            .preloaderTitle {
+                position: relative;
+                font-size: 90px;
+                font-weight: 700;
+                pointer-events: none;
+                color: white;
+                &:first-child {
+                    transform: translateY(-100%);
+                }
+                &:last-child {
+                    transform: translateY(100%);
+                }
+                span {
+                    display: block;
+                    position: absolute;
+                    top: 15px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    width: 280px;
+                    height: 2px;
+                    background-color: #fff;
+                }
+            }
+        }
+    }
+}
+
+// ===== HEADER STYLES =====
+.helloBlock {
+    color: white;
+    background-color: #233000;
+    padding-bottom: 185px;
+}
+// ===== SUBHEADER STYLES =====
+.subheader {
+    position: relative;
+    margin-bottom: 150px;
+    .slogan {
+        position: relative;
+        z-index: 2;
+        font-size: 115px;
+        font-weight: 700;
+        max-width: 880px;
+        margin-bottom: 50px;
+    }
+    .meat {
+        position: absolute;
+        top: 106px;
+        right: 0;
+        img {
+            width: 640px;
+        }
+        .spices {
+            display: flex;
+            position: absolute;
+            bottom: -30px;
+            left: -280px;
+            img {
+                width: 200px;
+                height: 200px;
+                margin-right: 44px;
+                &:last-child {
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+    .subheader-text {
+        max-width: 440px;
+        font-size: 19px;
+        font-weight: 400;
+        font-family: "Lato", sans-serif;
+        margin-bottom: 50px;
+    }
+    .scroll {
+        display: inline-block;
+        position: relative;
+        height: 460px;
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0px;
+            height: 100%;
+            border: 2px dashed #fff;
+        }
+        p {
+            display: inline-block;
+            position: relative;
+            z-index: 2;
+            font-size: 35px;
+            font-weight: 700;
+            writing-mode: vertical-lr;
+            background-color: #233000;
+            padding-bottom: 10px;
+            cursor: pointer;
+        }
+    }
+}
+
+.planningDiet {
+    display: flex;
+    justify-content: space-between;
+    p {
+        font-size: 19px;
+        font-weight: 400;
+        line-height: 30.6px;
+        font-family: "Lato", sans-serif;
+    }
+    .firstBlock {
+        max-width: 615px;
+        p {
+            max-width: 418px;
+        }
+        img {
+            width: 100%;
+            margin-bottom: 54px;
+        }
+        h2 {
+            max-width: 370px;
+            font-weight: 700;
+            font-size: 51px;
+            margin-bottom: 54px;
+        }
+    }
+    .secondBlock {
+        max-width: 425px;
+        img {
+            width: 100%;
+        }
+        p {
+            margin-bottom: 84px;
+        }
+    }
+}
+
+// ===== MENU =====
+
+.menu {
+    position: relative;
+    padding-top: 135px;
+    padding-bottom: 150px;
+    overflow: hidden;
+    &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 760px;
+        height: 760px;
+        @include setBackgroundImage("../images/mainPage/leafs.png");
+    }
+    .menu-title {
+        margin-bottom: 150px;
+        h2 {
+            font-size: 78px;
+            margin-bottom: 10px;
+        }
+        p {
+            max-width: 380px;
+            font-size: 18px;
+            font-family: "Lato", sans-serif;
+        }
+    }
+    .items {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 100px 0px;
+        justify-content: space-between;
+        .item {
+            width: 600px;
+            .price {
+                display: flex;
+                justify-content: flex-end;
+                font-size: 28px;
+                font-weight: 700;
+                margin-bottom: 7px;
+            }
+            .line {
+                width: 100%;
+                border: 2px dashed black;
+                margin-bottom: 24px;
+            }
+            .item-name {
+                font-size: 48px;
+                margin-bottom: 20px;
+            }
+            .item-description {
+                font-size: 18px;
+                font-family: "Lato", sans-serif;
+                color: #4d4d4d;
+            }
+        }
+    }
+}
+
+// ===== COOKING PROCESS =====
+
+.cookingProcess {
+    position: relative;
+    padding-top: 150px;
+    background-color: #ebf0e4;
+    &::after,
+    &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        @include setBackgroundImage("../images/mainPage/leafBg.png");
+    }
+    &::before {
+        width: 280px;
+        height: 280px;
+        transform: scale(-1, 1);
+        top: 93px;
+        left: 95px;
+    }
+    &::after {
+        width: 330px;
+        height: 330px;
+        bottom: 0px;
+        right: 225px;
+    }
+    .cookingProcess-content {
+        display: flex;
+        .chef {
+            flex-shrink: 0;
+            width: 665px;
+            position: relative;
+            z-index: 2;
+            margin-right: 50px;
+            .plate {
+                height: 620px;
+                position: absolute;
+                bottom: 23px;
+                left: -10px;
+                z-index: 100;
+            }
+            .cookingMan {
+                width: 100%;
+                height: 100%;
+            }
+        }
+        .process {
+            h2 {
+                font-size: 86px;
+                margin-bottom: 8px;
+            }
+            p {
+                font-size: 22px;
+                font-family: "Lato", sans-serif;
+                color: #4d4d4d;
+            }
+        }
+    }
+}
+
+// ===== BENEFITS =====
+
+.pin-spacer {
+    width: 100% !important;
+}
+
+.benefits {
+    width: 100% !important;
+    padding: 150px 0;
+}
+.benefits-content {
+    display: flex;
+    justify-content: space-between;
+    .benefit {
+        width: 373px;
+        text-align: center;
+        .benefit-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 150px;
+            height: 150px;
+            border-radius: 100%;
+            background-color: #ebf0e4;
+            margin: 0 auto;
+            margin-bottom: 20px;
+            img {
+                width: 100px;
+            }
+        }
+        h3 {
+            font-size: 30px;
+            font-weight: 700;
+            margin-bottom: 25px;
+        }
+        p {
+            font-size: 18px;
+            font-family: "Lato", sans-serif;
+            color: #4d4d4d;
+        }
+    }
+}
+
+// ===== FOOD POSTS =====
+
+.foodPosts {
+    padding: 75px 0 150px 0;
+}
+
+.foodPosts-content {
+    display: flex;
+    justify-content: space-between;
+    .dishPost {
+        width: 620px;
+        .dishPhotoWrapper {
+            margin-bottom: 40px;
+            position: relative;
+            p {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: white;
+                font-size: 20px;
+                font-weight: 700;
+                width: 160px;
+                height: 45px;
+                background-color: #5e6600;
+                position: absolute;
+                top: 12px;
+                right: 12px;
+            }
+            .dishPhoto {
+                width: 100%;
+            }
+        }
+        .mainPostInfo {
+            width: 525px;
+            margin: 0 auto;
+        }
+        .postInfo {
+            display: flex;
+            align-items: center;
+            margin-bottom: 35px;
+            .userPhoto {
+                width: 75px;
+                height: 75px;
+                border-radius: 100%;
+                margin-right: 5px;
+            }
+            .additionalInfo {
+                font-family: "Lato", sans-serif;
+                font-size: 17px;
+                color: #5e6600;
+            }
+            .circle {
+                font-size: 14px;
+            }
+        }
+        .postTitle {
+            font-size: 41px;
+            margin-bottom: 12px;
+        }
+        .line {
+            width: 100%;
+            border: 2px dashed black;
+            margin-bottom: 24px;
+        }
+        .postText {
+            font-size: 18px;
+            font-family: "Lato", sans-serif;
+            font-weight: 700;
+            color: #4d4d4d;
+            margin-bottom: 35px;
+        }
+        .readMore {
+            display: inline-block;
+            position: relative;
+            color: black;
+            font-family: "Lato", sans-serif;
+            font-size: 20px;
+
+            &::after {
+                content: "";
+                position: absolute;
+                top: 2px;
+                transform: rotate(180deg);
+                right: -45px;
+                display: block;
+                width: 46px;
+                height: 26px;
+                @include setBackgroundImage("../icons/arrow.svg");
+                transition: 0.3s;
+            }
+            &:hover::after {
+                right: -52px;
+            }
+        }
+    }
+}
+
+// ===== MAKING RESERVATION =====
+
+.makingReservation {
+    padding: 150px 0;
+    background-color: #ebf0e4;
+    .reservationTitle {
+        margin-bottom: 100px;
+        h2 {
+            text-align: center;
+            font-size: 75px;
+            margin-bottom: 5px;
+        }
+        p {
+            text-align: center;
+            font-size: 20px;
+            font-family: "Lato", sans-serif;
+            color: #4d4d4d;
+        }
+    }
+    .reservation {
+        .reservationForms {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 80px;
+            .fieldWrapper {
+                position: relative;
+                width: calc((100% / 3) - 40px);
+                height: 75px;
+                .fieldBorder {
+                    display: block;
+                    position: absolute;
+                    z-index: 10;
+                    &.top,
+                    &.bottom {
+                        left: 0;
+                        width: 100%;
+                        height: 2px;
+                        background-color: black;
+                    }
+                    &.top {
+                        top: 0;
+                        transform-origin: left;
+                    }
+                    &.bottom {
+                        bottom: 0;
+                        transform-origin: right;
+                    }
+                    &.left,
+                    &.right {
+                        top: 0;
+                        width: 2px;
+                        height: 100%;
+                        background-color: black;
+                    }
+                    &.left {
+                        left: 0;
+                        transform-origin: bottom;
+                    }
+                    &.right {
+                        right: 0;
+                        transform-origin: top;
+                    }
+                }
+            }
+            .selectDate,
+            .selectTime,
+            .persoNumber {
+                width: 100%;
+                height: 100%;
+                padding: 0 20px;
+                border: none;
+                outline: none;
+                background-color: transparent;
+                font-family: "Lato", sans-serif;
+            }
+        }
+        .booking {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 220px;
+            height: 60px;
+            color: white;
+            font-size: 20px;
+            background-color: #233000;
+            border: none;
+            margin: 0 auto;
+            cursor: pointer;
+        }
+    }
+}
+
+// ===== MAIN MEALS =====
+.mainMeals {
+    padding: 100px 0;
+}
+.mainMeals-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 100px;
+    h2,
+    p {
+        text-align: center;
+    }
+    h2 {
+        max-width: 600px;
+        font-size: 75px;
+        margin-bottom: 15px;
+    }
+    p {
+        font-size: 20px;
+        font-family: "Lato", sans-serif;
+        color: #4d4d4d;
+    }
+}
+.meals {
+    display: flex;
+    justify-content: space-between;
+    .meal {
+        position: relative;
+        width: calc((100% / 3) - 25px);
+        img {
+            width: 100%;
+        }
+        p {
+            position: absolute;
+            z-index: 2;
+            top: 43px;
+            left: 32px;
+            font-size: 35px;
+            font-weight: 700;
+        }
+        &::after {
+            content: "";
+            position: absolute;
+            top: 50px;
+            transform: rotate(180deg);
+            right: 32px;
+            display: block;
+            width: 46px;
+            height: 26px;
+            @include setBackgroundImage("../icons/arrow.svg");
+        }
+    }
+}
+
+// ====== COMMENTS ======
+
+.comments {
+    padding: 85px;
+}
+.comments-content {
+    padding: 0 70px;
+}
+.commenText {
+    position: relative;
+    font-size: 37px;
+    font-weight: 700;
+    max-width: 985px;
+    margin-bottom: 40px;
+
+    &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 195px;
+        height: 195px;
+        @include setBackgroundImage("../icons/quote.png");
+        top: -20px;
+        right: -70px;
+        z-index: -1;
+    }
+}
+.commentInfo {
+    display: flex;
+    justify-content: space-between;
+    .author {
+        display: flex;
+        align-items: center;
+        img {
+            width: 140px;
+            height: 140px;
+            margin-right: 20px;
+        }
+        .authorName {
+            font-weight: 700;
+            font-size: 25px;
+            margin-bottom: 4px;
+        }
+        .authorOccupation {
+            font-size: 15px;
+            font-family: "Lato", sans-serif;
+            color: #4d4d4d;
+        }
+    }
+    .arrows {
+        display: flex;
+        align-items: center;
+        img:first-child {
+            width: 35px;
+        }
+        img:last-child {
+            width: 35px;
+            transform: rotate(180deg);
+        }
+        p {
+            flex-shrink: 0;
+            font-size: 26px;
+            font-weight: 700;
+            margin: 0 20px;
+        }
+    }
+}
+
+// ===== ADAPTIVE =====
+
+@media (max-width: 1200px) {
+    // ===== SUBHEADER STYLES =====
+
+    .subheader {
+        margin-bottom: 125px;
+        .slogan {
+            font-size: 90px;
+            max-width: 645px;
+        }
+        .meat {
+            top: 82px;
+            img {
+                width: 495px;
+            }
+            .spices {
+                overflow-x: hidden;
+                left: -233px;
+                img {
+                    width: 155px;
+                    height: 155px;
+                }
+            }
+        }
+        .scroll {
+            height: 370px;
+
+            p {
+                font-size: 32px;
+            }
+        }
+    }
+    .planningDiet {
+        display: flex;
+        justify-content: space-between;
+        p {
+            max-width: 418px;
+            font-size: 19px;
+            font-weight: 400;
+            font-family: "Lato", sans-serif;
+        }
+        .firstBlock {
+            max-width: 505px;
+            h2 {
+                max-width: 370px;
+                font-weight: 700;
+                font-size: 51px;
+                margin-bottom: 54px;
+            }
+        }
+        .secondBlock {
+            max-width: 375px;
+            p {
+                margin-bottom: 84px;
+            }
+        }
+    }
+
+    // ===== MENU =====
+
+    .menu {
+        padding-bottom: 125px;
+        &::before {
+            width: 625px;
+            height: 625px;
+        }
+        .menu-title {
+            margin-bottom: 110px;
+        }
+        .items {
+            gap: 100px 0px;
+            .item {
+                width: 475px;
+            }
+        }
+    }
+
+    // ===== COOKING PROCESS =====
+
+    .cookingProcess {
+        padding-top: 120px;
+
+        &::before {
+            width: 260px;
+            height: 260px;
+            top: 65px;
+            left: 55px;
+        }
+        &::after {
+            width: 255px;
+            height: 255px;
+            bottom: 10px;
+            right: 120px;
+        }
+        .cookingProcess-content {
+            .chef {
+                width: 540px;
+                .plate {
+                    height: 502px;
+                    bottom: 23px;
+                    left: -8px;
+                }
+            }
+            .process {
+                h2 {
+                    font-size: 75px;
+                }
+                p {
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+
+    // ===== BENEFITS =====
+
+    .benefits {
+        padding-top: 150px;
+        padding-bottom: 125px;
+    }
+    .benefits-content {
+        .benefit {
+            width: 295px;
+            text-align: center;
+        }
+    }
+
+    // ===== FOOD POSTS =====
+
+    .foodPosts {
+        padding: 75px 0 150px 0;
+    }
+
+    .foodPosts-content {
+        display: flex;
+        justify-content: space-between;
+        .dishPost {
+            width: calc(50% - 20px);
+            .dishPhotoWrapper {
+                margin-bottom: 40px;
+                position: relative;
+
+                .dishPhoto {
+                    width: 100%;
+                }
+            }
+            .mainPostInfo {
+                width: 88%;
+                margin: 0 auto;
+            }
+            .postInfo {
+                display: flex;
+                align-items: center;
+                margin-bottom: 35px;
+                .userPhoto {
+                    width: 60px;
+                    height: 60px;
+                    border-radius: 100%;
+                    margin-right: 5px;
+                }
+                .additionalInfo {
+                    font-family: "Lato", sans-serif;
+                    font-size: 14px;
+                    color: #5e6600;
+                }
+                .circle {
+                    font-size: 14px;
+                }
+            }
+            .postTitle {
+                font-size: 33px;
+                margin-bottom: 12px;
+            }
+            .line {
+                width: 100%;
+                border: 2px dashed black;
+                margin-bottom: 24px;
+            }
+            .postText {
+                font-size: 17px;
+                font-family: "Lato", sans-serif;
+                font-weight: 700;
+                color: #4d4d4d;
+                margin-bottom: 35px;
+            }
+            .readMore {
+                display: inline-block;
+                position: relative;
+                color: black;
+                font-family: "Lato", sans-serif;
+                font-size: 18px;
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    top: 2px;
+                    transform: rotate(180deg);
+                    right: -45px;
+                    display: block;
+                    width: 46px;
+                    height: 26px;
+                    @include setBackgroundImage("../icons/arrow.svg");
+                    transition: 0.3s;
+                }
+                &:hover::after {
+                    right: -52px;
+                }
+            }
+        }
+    }
+
+    // ===== MAKING RESERVATION =====
+
+    .makingReservation {
+        padding: 130px 0;
+        .reservation {
+            .reservationForms {
+                .fieldWrapper {
+                    width: calc((100% / 3) - 25px);
+                }
+                .field {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    // ===== MAIN MEALS =====
+
+    .meals {
+        .meal {
+            position: relative;
+            width: calc((100% / 3) - 20px);
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    // ===== SUBHEADER STYLES =====
+
+    .subheader {
+        margin-bottom: 110px;
+        .slogan {
+            font-size: 70px;
+            max-width: 515px;
+        }
+        .subheader-text {
+            max-width: 290px;
+            font-size: 19px;
+            font-weight: 400;
+            font-family: "Lato", sans-serif;
+            margin-bottom: 50px;
+        }
+        .meat {
+            top: 65px;
+            img {
+                width: 362px;
+            }
+            .spices {
+                left: -175px;
+                img {
+                    width: 115px;
+                    height: 115px;
+                    margin-right: 25px;
+                }
+            }
+        }
+        .scroll {
+            height: 260px;
+
+            p {
+                font-size: 23px;
+            }
+        }
+    }
+    .planningDiet {
+        display: flex;
+        justify-content: space-between;
+        p {
+            max-width: 418px;
+            font-size: 19px;
+            font-weight: 400;
+            font-family: "Lato", sans-serif;
+        }
+        .firstBlock {
+            max-width: 345px;
+            h2 {
+                font-size: 43px;
+                margin-bottom: 45px;
+            }
+        }
+        .secondBlock {
+            max-width: 280px;
+            p {
+                margin-bottom: 60px;
+            }
+        }
+    }
+
+    // ===== MENU =====
+
+    .menu {
+        padding-bottom: 125px;
+        &::before {
+            width: 410px;
+            height: 410px;
+        }
+        .menu-title {
+            margin-bottom: 95px;
+            h2 {
+                font-size: 62px;
+            }
+        }
+        .items {
+            gap: 100px 0px;
+            .item {
+                width: 315px;
+                .price {
+                    font-size: 25px;
+                }
+                .item-name {
+                    font-size: 30px;
+                }
+                .item-description {
+                    font-size: 17px;
+                }
+            }
+        }
+    }
+
+    // ===== COOKING PROCESS =====
+
+    .cookingProcess {
+        padding-top: 120px;
+
+        &::before {
+            width: 200px;
+            height: 200px;
+            top: 23px;
+            left: 17px;
+        }
+        &::after {
+            width: 210px;
+            height: 210px;
+            bottom: 5px;
+            right: 40px;
+        }
+        .cookingProcess-content {
+            flex-direction: column-reverse;
+            .chef {
+                width: 395px;
+                margin: 0 auto;
+                .plate {
+                    height: 365px;
+                    bottom: 23px;
+                    left: -6px;
+                }
+            }
+            .process {
+                h2,
+                p {
+                    text-align: center;
+                }
+                h2 {
+                    font-size: 45px;
+                }
+                p {
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+
+    // ===== BENEFITS =====
+
+    .benefits {
+        padding-top: 150px;
+        padding-bottom: 105px;
+    }
+    .benefits-content {
+        .benefit {
+            flex: 1;
+            width: 205px;
+            text-align: center;
+            .benefit-icon {
+                width: 125px;
+                height: 125px;
+                img {
+                    width: 75px;
+                }
+            }
+            h3 {
+                font-size: 22px;
+                margin-bottom: 10px;
+            }
+            p {
+                font-size: 16px;
+            }
+        }
+    }
+
+    // ===== FOOD POSTS =====
+
+    .foodPosts {
+        padding: 75px 0 115px 0;
+    }
+
+    .foodPosts-content {
+        display: flex;
+        justify-content: space-between;
+        .dishPost {
+            width: calc(50% - 15px);
+            .dishPhotoWrapper {
+                position: relative;
+                &::after {
+                    font-size: 17px;
+                    width: 125px;
+                    height: 35px;
+                }
+            }
+            .mainPostInfo {
+                width: 88%;
+                margin: 0 auto;
+            }
+            .postInfo {
+                display: flex;
+                align-items: center;
+                margin-bottom: 35px;
+                .userPhoto {
+                    width: 60px;
+                    height: 60px;
+                    border-radius: 100%;
+                    margin-right: 5px;
+                }
+                .additionalInfo {
+                    font-family: "Lato", sans-serif;
+                    font-size: 14px;
+                    color: #5e6600;
+                }
+                .circle {
+                    font-size: 14px;
+                }
+            }
+            .postTitle {
+                font-size: 25px;
+                margin-bottom: 12px;
+            }
+            .line {
+                width: 100%;
+                border: 2px dashed black;
+                margin-bottom: 24px;
+            }
+            .postText {
+                font-size: 17px;
+                font-family: "Lato", sans-serif;
+                font-weight: 700;
+                color: #4d4d4d;
+                margin-bottom: 35px;
+            }
+            .readMore {
+                display: inline-block;
+                position: relative;
+                color: black;
+                font-family: "Lato", sans-serif;
+                font-size: 18px;
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    top: 2px;
+                    transform: rotate(180deg);
+                    right: -45px;
+                    display: block;
+                    width: 46px;
+                    height: 26px;
+                    @include setBackgroundImage("../icons/arrow.svg");
+                    transition: 0.3s;
+                }
+                &:hover::after {
+                    right: -52px;
+                }
+            }
+        }
+    }
+
+    // ===== MAKING RESERVATION =====
+
+    .makingReservation {
+        padding: 120px 0;
+        .reservationTitle {
+            margin-bottom: 75px;
+            h2 {
+                font-size: 52px;
+            }
+        }
+        .reservation {
+            .reservationForms {
+                gap: 35px 0;
+                flex-wrap: wrap;
+                .selectDate,
+                .selectTime,
+                .persoNumber {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    // ===== MAIN MEALS =====
+
+    .mainMeals {
+        padding-bottom: 75px;
+    }
+
+    .mainMeals-title {
+        margin-bottom: 85px;
+        h2 {
+            font-size: 62px;
+        }
+    }
+    .meals {
+        display: block;
+        overflow-x: hidden;
+        .meal {
+            width: 425px;
+            margin: 0 auto;
+            margin-bottom: 25px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    // ====== COMMENTS ======
+
+    .comments {
+        padding: 85px 0;
+    }
+    .comments-content {
+        padding: 0;
+    }
+    .commenText {
+        position: relative;
+        font-size: 30px;
+        font-weight: 700;
+        max-width: 985px;
+        margin-bottom: 40px;
+
+        &::after {
+            content: "";
+            display: block;
+            position: absolute;
+            width: 135px;
+            height: 135px;
+            @include setBackgroundImage("../icons/quote.png");
+            top: -20px;
+            right: -5px;
+            z-index: -1;
+        }
+    }
+    .commentInfo {
+        display: flex;
+        justify-content: space-between;
+        .author {
+            display: flex;
+            align-items: center;
+            img {
+                width: 120px;
+                height: 120px;
+                margin-right: 20px;
+            }
+            .authorName {
+                font-weight: 700;
+                font-size: 25px;
+                margin-bottom: 4px;
+            }
+            .authorOccupation {
+                font-size: 15px;
+                font-family: "Lato", sans-serif;
+                color: #4d4d4d;
+            }
+        }
+        .arrows {
+            display: flex;
+            align-items: center;
+            overflow-x: hidden;
+            img:first-child {
+                width: 30px;
+            }
+            img:last-child {
+                width: 30px;
+                transform: rotate(180deg);
+            }
+            p {
+                flex-shrink: 0;
+                font-size: 23px;
+                font-weight: 700;
+                margin: 0 20px;
+            }
+        }
+    }
+}
+@media (max-width: 480px) {
+    // ===== SUBHEADER STYLES =====
+
+    .subheader {
+        margin-bottom: 135px;
+        .slogan {
+            font-size: 47px;
+            max-width: 355px;
+            margin-bottom: 40px;
+        }
+        .subheader-text {
+            max-width: 235px;
+            font-size: 17px;
+            margin: 0;
+        }
+        .meat {
+            top: 45px;
+            img {
+                width: 200px;
+            }
+            .spices {
+                left: 50%;
+                transform: translateX(-50%);
+                img {
+                    width: 65px;
+                    height: 65px;
+                    margin-right: 12px;
+                }
+            }
+        }
+        .scroll {
+            display: none;
+        }
+    }
+    .planningDiet {
+        display: flex;
+        justify-content: space-between;
+
+        .firstBlock {
+            max-width: 240px;
+            img {
+                margin-bottom: 25px;
+            }
+            h2 {
+                font-size: 32px;
+                margin-bottom: 25px;
+            }
+            p {
+                font-size: 17px;
+            }
+        }
+        .secondBlock {
+            max-width: 175px;
+            p {
+                font-size: 17px;
+                margin-bottom: 45px;
+            }
+        }
+    }
+
+    // ===== MENU =====
+
+    .menu {
+        padding-bottom: 100px;
+        &::before {
+            width: 340px;
+            height: 340px;
+        }
+        .menu-title {
+            margin-bottom: 75px;
+            h2 {
+                font-size: 62px;
+            }
+        }
+        .items {
+            gap: 85px 0px;
+            .item {
+                width: 100%;
+                .price {
+                    font-size: 27px;
+                }
+                .item-name {
+                    font-size: 35px;
+                    margin-bottom: 15px;
+                }
+                .item-description {
+                    font-size: 19px;
+                }
+            }
+        }
+    }
+
+    // ===== COOKING PROCESS =====
+
+    .cookingProcess {
+        padding-top: 90px;
+
+        &::before {
+            width: 160px;
+            height: 160px;
+        }
+        &::after {
+            content: none;
+        }
+        .cookingProcess-content {
+            .chef {
+                width: 350px;
+                margin: 0 auto;
+                .plate {
+                    height: 320px;
+                    bottom: 23px;
+                    left: -6px;
+                }
+            }
+            .process {
+                h2,
+                p {
+                    text-align: center;
+                }
+                h2 {
+                    font-size: 45px;
+                }
+                p {
+                    font-size: 19px;
+                }
+            }
+        }
+    }
+
+    // ===== BENEFITS =====
+
+    .benefits {
+        padding-top: 110px;
+        padding-bottom: 85px;
+    }
+    .benefits-content {
+        flex-direction: column;
+        align-items: center;
+        gap: 75px 0;
+        .benefit {
+            width: 275px;
+            text-align: center;
+            .benefit-icon {
+                width: 145px;
+                height: 145px;
+                img {
+                    width: 85px;
+                }
+            }
+            h3 {
+                font-size: 27px;
+                margin-bottom: 15px;
+            }
+            p {
+                font-size: 19px;
+            }
+        }
+    }
+
+    // ===== FOOD POSTS =====
+
+    .foodPosts {
+        padding: 55px 0 100px 0;
+    }
+
+    .foodPosts-content {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        align-items: center;
+        gap: 85px 0;
+        .dishPost {
+            width: 95%;
+            .dishPhotoWrapper {
+                &::after {
+                    font-size: 19px;
+                    width: 130px;
+                    height: 40px;
+                }
+            }
+            .postInfo {
+                align-items: center;
+                .userPhoto {
+                    width: 68px;
+                    height: 68px;
+                    margin-right: 10px;
+                }
+                .additionalInfo {
+                    font-size: 15px;
+                }
+            }
+            .postTitle {
+                font-size: 27px;
+            }
+
+            .postText {
+                font-size: 18px;
+                margin-bottom: 35px;
+            }
+            .readMore {
+                font-size: 21px;
+            }
+        }
+    }
+
+    // ===== MAKING RESERVATION =====
+
+    .makingReservation {
+        padding: 100px 0;
+        .reservationTitle {
+            margin-bottom: 75px;
+            h2 {
+                font-size: 47px;
+                margin-bottom: 15px;
+            }
+            p {
+                font-size: 18px;
+            }
+        }
+        .reservation {
+            .reservationForms {
+                margin-bottom: 65px;
+            }
+        }
+    }
+
+    // ===== MAIN MEALS =====
+
+    .mainMeals {
+        padding-bottom: 55px;
+    }
+
+    .mainMeals-title {
+        margin-bottom: 75px;
+        h2 {
+            font-size: 53px;
+        }
+        p {
+            font-size: 20px;
+        }
+    }
+    .meals {
+        .meal {
+            width: 90%;
+        }
+    }
+
+    // ====== COMMENTS ======
+
+    .comments {
+        padding: 85px 0;
+    }
+    .comments-content {
+        padding: 0;
+    }
+    .commenText {
+        position: relative;
+        font-size: 22px;
+        font-weight: 700;
+        max-width: 385px;
+        margin: 0 auto;
+        margin-bottom: 40px;
+
+        &::after {
+            width: 120px;
+            height: 120px;
+            top: -10px;
+            right: -10px;
+        }
+    }
+    .commentInfo {
+        display: flex;
+        justify-content: space-between;
+        .author {
+            display: flex;
+            align-items: center;
+            img {
+                width: 105px;
+                height: 105px;
+                margin-right: 20px;
+            }
+            .authorName {
+                font-weight: 700;
+                font-size: 23px;
+                margin-bottom: 4px;
+            }
+            .authorOccupation {
+                font-size: 15px;
+                font-family: "Lato", sans-serif;
+                color: #4d4d4d;
+            }
+        }
+        .arrows {
+            img:first-child {
+                width: 26px;
+            }
+            img:last-child {
+                width: 26px;
+            }
+            p {
+                font-size: 22px;
+                margin: 0 20px;
+            }
+        }
+    }
+}
+@media (max-width: 442px) {
+    // ===== SUBHEADER STYLES =====
+
+    .subheader {
+        .slogan {
+            font-size: 42px;
+            max-width: 315px;
+        }
+        .subheader-text {
+            max-width: 175px;
+        }
+        .meat {
+            top: 39px;
+            img {
+                width: 195px;
+            }
+            .spices {
+                img {
+                    width: 60px;
+                    height: 60px;
+                }
+            }
+        }
+    }
+    .planningDiet {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .firstBlock {
+            display: flex;
+            flex-direction: column-reverse;
+            max-width: 100%;
+            img {
+                margin-bottom: 25px;
+            }
+            h2 {
+                text-align: center;
+            }
+            p {
+                margin-bottom: 25px;
+            }
+        }
+        .secondBlock {
+            max-width: 100%;
+            img {
+                display: block;
+                width: 80%;
+                margin: 0 auto;
+            }
+            p {
+                margin-bottom: 35px;
+            }
+        }
+    }
+
+    // ===== MENU =====
+
+    .menu {
+        padding-bottom: 85px;
+        &::before {
+            width: 310px;
+            height: 310px;
+        }
+        .menu-title {
+            margin-bottom: 75px;
+            h2 {
+                font-size: 50px;
+            }
+            p {
+                font-size: 18px;
+                max-width: 320px;
+            }
+        }
+        .items {
+            gap: 85px 0px;
+            .item {
+                .price {
+                    font-size: 25px;
+                }
+                .item-name {
+                    font-size: 34px;
+                }
+            }
+        }
+    }
+
+    // // ===== FOOD POSTS =====
+
+    .foodPosts-content {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        align-items: center;
+        gap: 85px 0;
+        .dishPost {
+            width: 100%;
+
+            .mainPostInfo {
+                width: 100%;
+            }
+
+            .postTitle {
+                font-size: 28px;
+            }
+        }
+    }
+
+    // ===== MAKING RESERVATION =====
+
+    .makingReservation {
+        padding: 85px 0;
+        .reservationTitle {
+            margin-bottom: 65px;
+            h2 {
+                font-size: 44px;
+            }
+            p {
+                font-size: 17px;
+            }
+        }
+        .reservation {
+            .reservationForms {
+                margin-bottom: 65px;
+                .selectDate,
+                .selectTime,
+                .persoNumber {
+                    height: 60px;
+                }
+            }
+            .booking {
+                width: 195px;
+                height: 55px;
+            }
+        }
+    }
+
+    // ===== MAIN MEALS =====
+
+    .mainMeals-title {
+        h2 {
+            font-size: 51px;
+        }
+    }
+
+    // ====== COMMENTS ======
+
+    .comments {
+        padding-top: 55px;
+        padding-bottom: 80px;
+    }
+    .commenText {
+        font-size: 21px;
+
+        &::after {
+            width: 115px;
+            height: 115px;
+        }
+    }
+    .commentInfo {
+        flex-wrap: wrap;
+        justify-content: center;
+        .author {
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+            img {
+                width: 105px;
+                height: 105px;
+                margin-right: 20px;
+            }
+            .authorName {
+                font-weight: 700;
+                font-size: 23px;
+                margin-bottom: 4px;
+            }
+            .authorOccupation {
+                font-size: 15px;
+                font-family: "Lato", sans-serif;
+                color: #4d4d4d;
+            }
+        }
+        .arrows {
+            img:first-child {
+                width: 33px;
+            }
+            img:last-child {
+                width: 33px;
+            }
+            p {
+                font-size: 24px;
+                margin: 0 20px;
+            }
+        }
+    }
+}
+@media (max-width: 320px) {
+    // ===== SUBHEADER STYLES =====
+
+    .subheader {
+        margin-bottom: 85px;
+        .slogan {
+            font-size: 34px;
+            max-width: 265px;
+            margin-bottom: 40px;
+        }
+        .subheader-text {
+            max-width: 125px;
+            font-size: 17px;
+        }
+        .meat {
+            top: 31px;
+            img {
+                width: 155px;
+            }
+            .spices {
+                img {
+                    width: 50px;
+                    height: 50px;
+                }
+            }
+        }
+    }
+    .planningDiet {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .firstBlock {
+            display: flex;
+            flex-direction: column-reverse;
+            max-width: 100%;
+            img {
+                margin-bottom: 25px;
+            }
+            h2 {
+                text-align: center;
+            }
+            p {
+                margin-bottom: 25px;
+            }
+        }
+        .secondBlock {
+            max-width: 100%;
+            img {
+                display: block;
+                width: 80%;
+                margin: 0 auto;
+            }
+            p {
+                margin-bottom: 35px;
+            }
+        }
+    }
+
+    // ===== MENU =====
+
+    .menu {
+        padding-bottom: 85px;
+        &::before {
+            width: 275px;
+            height: 275px;
+        }
+        .menu-title {
+            margin-bottom: 75px;
+            h2 {
+                font-size: 50px;
+            }
+            p {
+                font-size: 17px;
+            }
+        }
+        .items {
+            gap: 85px 0px;
+            .item {
+                .price {
+                    font-size: 25px;
+                }
+                .item-name {
+                    font-size: 34px;
+                }
+            }
+        }
+    }
+
+    // ===== COOKING PROCESS =====
+
+    .cookingProcess {
+        padding-top: 65px;
+
+        &::before {
+            width: 135px;
+            height: 135px;
+        }
+
+        .cookingProcess-content {
+            .chef {
+                width: 250px;
+                margin: 0 auto;
+                .plate {
+                    height: 225px;
+                    bottom: 19px;
+                    left: -4px;
+                }
+            }
+            .process {
+                h2,
+                p {
+                    text-align: center;
+                }
+                h2 {
+                    font-size: 42px;
+                }
+                p {
+                    font-size: 16px;
+                    margin-bottom: 15px;
+                }
+            }
+        }
+    }
+
+    // ===== BENEFITS =====
+
+    .benefits {
+        padding-top: 100px;
+        padding-bottom: 75px;
+    }
+    .benefits-content {
+        flex-direction: column;
+        align-items: center;
+        gap: 75px 0;
+        .benefit {
+            width: 275px;
+            text-align: center;
+            .benefit-icon {
+                width: 135px;
+                height: 135px;
+                img {
+                    width: 78px;
+                }
+            }
+            h3 {
+                font-size: 26px;
+            }
+            p {
+                font-size: 17px;
+            }
+        }
+    }
+
+    // ===== FOOD POSTS =====
+
+    .foodPosts {
+        padding: 55px 0 100px 0;
+    }
+
+    .foodPosts-content {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        align-items: center;
+        gap: 85px 0;
+        .dishPost {
+            width: 100%;
+            .dishPhotoWrapper {
+                &::after {
+                    font-size: 17px;
+                    width: 110px;
+                    height: 32px;
+                }
+            }
+            .mainPostInfo {
+                width: 100%;
+            }
+
+            .postInfo {
+                .additionalInfo {
+                    font-size: 14px;
+                }
+            }
+            .postTitle {
+                font-size: 26px;
+            }
+
+            .postText {
+                font-size: 17px;
+            }
+            .readMore {
+                font-size: 19px;
+            }
+        }
+    }
+
+    // ===== MAIN MEALS =====
+
+    .mainMeals {
+        padding-top: 85px;
+        padding-bottom: 55px;
+    }
+
+    .mainMeals-title {
+        margin-bottom: 70px;
+        h2 {
+            font-size: 39px;
+            margin-bottom: 20px;
+        }
+        p {
+            font-size: 19px;
+        }
+    }
+    .meals {
+        .meal {
+            width: 95%;
+        }
+    }
+
+    // ====== COMMENTS ======
+
+    .comments {
+        padding-top: 55px;
+        padding-bottom: 80px;
+    }
+    .comments-content {
+        padding: 0;
+    }
+    .commenText {
+        position: relative;
+        font-size: 20px;
+        font-weight: 700;
+        max-width: 385px;
+        margin: 0 auto;
+        margin-bottom: 40px;
+
+        &::after {
+            width: 100px;
+            height: 100px;
+            top: -10px;
+            right: 0px;
+        }
+    }
+}

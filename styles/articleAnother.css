@@ -1,0 +1,922 @@
+header {
+  display: block;
+  background-image: url(../images/articleAnother/rawMeat.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  margin: 0;
+  padding-bottom: 135px;
+}
+header .subheader {
+  width: 100%;
+  margin-top: 120px;
+}
+header .subheader .title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 965px;
+  margin: 0 auto;
+}
+header .subheader h1 {
+  font-size: 85px;
+  font-weight: 700;
+  text-align: center;
+}
+header .subheader .postInfo {
+  display: flex;
+  align-items: center;
+  margin-bottom: 35px;
+}
+header .subheader .postInfo .userPhoto {
+  width: 105px;
+  height: 105px;
+  border-radius: 100%;
+  margin-right: 5px;
+}
+header .subheader .postInfo .additionalInfo {
+  font-family: "Lato", sans-serif;
+  font-size: 17px;
+  color: #fff;
+}
+header .subheader .postInfo .circle {
+  font-size: 14px;
+  margin: 0 15px;
+}
+
+.specialWrapper {
+  max-width: 1055px;
+  margin: 0 auto;
+}
+
+.artcileMainText {
+  padding-top: 100px;
+  padding-bottom: 150px;
+}
+.artcileMainText .line {
+  position: relative;
+}
+.artcileMainText .line::after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: -150px;
+  left: 0;
+  display: block;
+  width: 100%;
+  border: 3px dashed black;
+}
+.artcileMainText .artcileMainText-content .pageLink {
+  text-align: center;
+  margin-bottom: 65px;
+}
+.artcileMainText .artcileMainText-content .pageLink p {
+  font-size: 20px;
+  font-family: "Lato", sans-serif;
+}
+.artcileMainText .artcileMainText-content .pageLink p .unactiveLink {
+  font-family: "Lato", sans-serif;
+  color: #b0b0b0;
+}
+.artcileMainText .artcileMainText-content .pageLink p .activeLink {
+  font-family: "Lato", sans-serif;
+  color: #4d4d4d;
+}
+.artcileMainText .artcileMainText-content .titleText {
+  font-weight: 700;
+  font-size: 30px;
+  color: #4d4d4d;
+  margin-bottom: 85px;
+}
+.artcileMainText .artcileMainText-content .articleText {
+  color: #4d4d4d;
+  font-family: "Lato", sans-serif;
+  font-size: 20px;
+  line-height: 32.6px;
+  margin-bottom: 75px;
+}
+.artcileMainText .artcileMainText-content .articleText:last-child {
+  margin-bottom: 150px;
+}
+.artcileMainText .artcileMainText-content .noMargin {
+  margin-bottom: 0;
+}
+.artcileMainText .artcileMainText-content .articleInfo .dishPhotos {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 100px;
+}
+.artcileMainText .artcileMainText-content .articleInfo .dishPhotos img {
+  width: calc(50% - 30px);
+}
+.artcileMainText .artcileMainText-content .articleInfo .authorWords {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 172.5px 0;
+  margin-bottom: 110px;
+  background-image: url(../images/articleAnother/personeCooking.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.artcileMainText .artcileMainText-content .articleInfo .authorWords blockquote {
+  position: relative;
+  color: white;
+  font-family: "Lato", sans-serif;
+  font-size: 33px;
+  font-weight: 700;
+  max-width: 917px;
+  font-style: italic;
+}
+.artcileMainText .artcileMainText-content .articleInfo .authorWords blockquote span {
+  font-family: "Lato", sans-serif;
+}
+.artcileMainText .artcileMainText-content .articleInfo .authorWords blockquote::after {
+  content: "";
+  position: absolute;
+  right: 0px;
+  top: -32px;
+  display: block;
+  width: 195px;
+  height: 195px;
+  background-image: url(../icons/whiteQuote.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.artcileMainText .artcileMainText-content .articleInfo .tags {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+.artcileMainText .artcileMainText-content .articleInfo .tags p {
+  font-size: 25px;
+  font-weight: 700;
+}
+.artcileMainText .artcileMainText-content .articleInfo .tags ul {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 15px;
+  gap: 0 20px;
+}
+.artcileMainText .artcileMainText-content .articleInfo .tags ul li {
+  padding: 5px 13px;
+  border: 2px solid black;
+  font-size: 16px;
+  font-family: "Lato", sans-serif;
+}
+.artcileMainText .artcileMainText-content .articleInfo .userInfo {
+  display: flex;
+  align-items: center;
+  overflow-x: hidden;
+}
+.artcileMainText .artcileMainText-content .articleInfo .userInfo .userPhoto {
+  width: 200px;
+  height: 200px;
+  border-radius: 100%;
+  margin-right: 50px;
+}
+.artcileMainText .artcileMainText-content .articleInfo .userInfo .userName {
+  font-weight: 700;
+  font-size: 32px;
+  margin-bottom: 25px;
+}
+.artcileMainText .artcileMainText-content .articleInfo .userInfo .description {
+  font-family: "Lato", sans-serif;
+  color: #4d4d4d;
+  font-size: 21px;
+}
+
+.relatedPosts {
+  padding-top: 100px;
+  padding-bottom: 150px;
+}
+.relatedPosts .relatedPosts-title {
+  font-weight: 700;
+  font-size: 38px;
+  text-align: center;
+  margin-bottom: 110px;
+}
+.relatedPosts .foodPosts-content {
+  display: flex;
+  justify-content: space-between;
+}
+.relatedPosts .foodPosts-content .dishPost {
+  width: calc(50% - 30px);
+}
+.relatedPosts .foodPosts-content .dishPost .dishPhotoWrapper {
+  margin-bottom: 40px;
+  position: relative;
+}
+.relatedPosts .foodPosts-content .dishPost .dishPhotoWrapper p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 20px;
+  font-weight: 700;
+  width: 160px;
+  height: 45px;
+  background-color: #5e6600;
+  position: absolute;
+  top: 12px;
+  right: 12px;
+}
+.relatedPosts .foodPosts-content .dishPost .dishPhotoWrapper .dishPhoto {
+  width: 100%;
+}
+.relatedPosts .foodPosts-content .dishPost .mainPostInfo {
+  width: 525px;
+  margin: 0 auto;
+}
+.relatedPosts .foodPosts-content .dishPost .postInfo {
+  display: flex;
+  align-items: center;
+  margin-bottom: 35px;
+}
+.relatedPosts .foodPosts-content .dishPost .postInfo .userPhoto {
+  width: 75px;
+  height: 75px;
+  border-radius: 100%;
+  margin-right: 5px;
+}
+.relatedPosts .foodPosts-content .dishPost .postInfo .additionalInfo {
+  font-family: "Lato", sans-serif;
+  font-size: 17px;
+  color: #5e6600;
+}
+.relatedPosts .foodPosts-content .dishPost .postInfo .circle {
+  font-size: 14px;
+}
+.relatedPosts .foodPosts-content .dishPost .postTitle {
+  font-size: 41px;
+  margin-bottom: 12px;
+}
+.relatedPosts .foodPosts-content .dishPost .line {
+  width: 100%;
+  border: 2px dashed black;
+  margin-bottom: 24px;
+}
+.relatedPosts .foodPosts-content .dishPost .postText {
+  font-size: 18px;
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  color: #4d4d4d;
+  margin-bottom: 35px;
+}
+.relatedPosts .foodPosts-content .dishPost .readMore {
+  display: inline-block;
+  position: relative;
+  color: black;
+  font-family: "Lato", sans-serif;
+  font-size: 20px;
+}
+.relatedPosts .foodPosts-content .dishPost .readMore::after {
+  content: "";
+  position: absolute;
+  top: 2px;
+  transform: rotate(180deg);
+  right: -45px;
+  display: block;
+  width: 46px;
+  height: 26px;
+  background-image: url(../icons/arrow.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  transition: 0.3s;
+}
+.relatedPosts .foodPosts-content .dishPost .readMore:hover::after {
+  right: -52px;
+}
+
+@media (max-width: 1200px) {
+  .specialWrapper {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  .artcileMainText {
+    padding-top: 100px;
+    padding-bottom: 150px;
+  }
+  .artcileMainText .artcileMainText-content .articleInfo .dishPhotos img {
+    width: calc(50% - 15px);
+  }
+  .relatedPosts {
+    padding-top: 100px;
+    padding-bottom: 150px;
+  }
+  .relatedPosts .relatedPosts-title {
+    font-weight: 700;
+    font-size: 38px;
+    text-align: center;
+    margin-bottom: 110px;
+  }
+  .relatedPosts .foodPosts-content .dishPost {
+    width: calc(50% - 20px);
+  }
+  .relatedPosts .foodPosts-content .dishPost .dishPhotoWrapper {
+    margin-bottom: 40px;
+    position: relative;
+  }
+  .relatedPosts .foodPosts-content .dishPost .dishPhotoWrapper .dishPhoto {
+    width: 100%;
+  }
+  .relatedPosts .foodPosts-content .dishPost .mainPostInfo {
+    width: 88%;
+    margin: 0 auto;
+  }
+  .relatedPosts .foodPosts-content .dishPost .postInfo {
+    display: flex;
+    align-items: center;
+    margin-bottom: 35px;
+  }
+  .relatedPosts .foodPosts-content .dishPost .postInfo .userPhoto {
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+    margin-right: 5px;
+  }
+  .relatedPosts .foodPosts-content .dishPost .postInfo .additionalInfo {
+    font-family: "Lato", sans-serif;
+    font-size: 14px;
+    color: #5e6600;
+  }
+  .relatedPosts .foodPosts-content .dishPost .postInfo .circle {
+    font-size: 14px;
+  }
+  .relatedPosts .foodPosts-content .dishPost .postTitle {
+    font-size: 33px;
+    margin-bottom: 12px;
+  }
+  .relatedPosts .foodPosts-content .dishPost .line {
+    width: 100%;
+    border: 2px dashed black;
+    margin-bottom: 24px;
+  }
+  .relatedPosts .foodPosts-content .dishPost .postText {
+    font-size: 17px;
+    font-family: "Lato", sans-serif;
+    font-weight: 700;
+    color: #4d4d4d;
+    margin-bottom: 35px;
+  }
+  .relatedPosts .foodPosts-content .dishPost .readMore {
+    display: inline-block;
+    position: relative;
+    color: black;
+    font-family: "Lato", sans-serif;
+    font-size: 18px;
+  }
+  .relatedPosts .foodPosts-content .dishPost .readMore::after {
+    content: "";
+    position: absolute;
+    top: 2px;
+    transform: rotate(180deg);
+    right: -45px;
+    display: block;
+    transition: 0.3s;
+  }
+  .relatedPosts .foodPosts-content .dishPost .readMore:hover::after {
+    right: -52px;
+  }
+}
+@media (max-width: 768px) {
+  header {
+    padding-bottom: 100px;
+  }
+  header .subheader {
+    width: 100%;
+    margin-top: 120px;
+  }
+  header .subheader .title {
+    max-width: 660px;
+  }
+  header .subheader h1 {
+    font-size: 65px;
+  }
+  header .subheader .postInfo .circle {
+    font-size: 14px;
+    margin: 0 10px;
+  }
+  .specialWrapper {
+    max-width: 555px;
+    margin: 0 auto;
+  }
+  .artcileMainText {
+    padding-top: 100px;
+    padding-bottom: 150px;
+  }
+  .artcileMainText .artcileMainText-content .pageLink {
+    margin-bottom: 45px;
+  }
+  .artcileMainText .artcileMainText-content .pageLink p {
+    font-size: 18px;
+  }
+  .artcileMainText .artcileMainText-content .titleText {
+    font-size: 24px;
+    margin-bottom: 65px;
+  }
+  .artcileMainText .artcileMainText-content .articleText {
+    color: #4d4d4d;
+    font-family: "Lato", sans-serif;
+    font-size: 19px;
+    line-height: 32.6px;
+    margin-bottom: 75px;
+  }
+  .artcileMainText .artcileMainText-content .articleText:last-child {
+    margin-bottom: 120px;
+  }
+  .artcileMainText .artcileMainText-content .articleInfo .dishPhotos {
+    margin-bottom: 85px;
+  }
+  .artcileMainText .artcileMainText-content .articleInfo .authorWords {
+    padding: 125px 0;
+    margin-bottom: 90px;
+  }
+  .artcileMainText .artcileMainText-content .articleInfo .authorWords blockquote {
+    font-size: 24px;
+  }
+  .artcileMainText .artcileMainText-content .articleInfo .authorWords blockquote::after {
+    top: -22px;
+    width: 150px;
+    height: 150px;
+  }
+  .artcileMainText .artcileMainText-content .articleInfo .tags {
+    display: flex;
+    align-items: normal;
+    justify-content: center;
+    margin-top: 100px;
+    margin-bottom: 100px;
+  }
+  .artcileMainText .artcileMainText-content .articleInfo .tags p {
+    font-size: 25px;
+    font-weight: 700;
+  }
+  .artcileMainText .artcileMainText-content .articleInfo .tags ul {
+    display: flex;
+    margin-left: 15px;
+    gap: 10px 20px;
+  }
+  .artcileMainText .artcileMainText-content .articleInfo .tags ul li {
+    padding: 5px 13px;
+    border: 2px solid black;
+    font-size: 16px;
+    font-family: "Lato", sans-serif;
+  }
+  .artcileMainText .artcileMainText-content .articleInfo .userInfo {
+    display: flex;
+    align-items: center;
+  }
+  .artcileMainText .artcileMainText-content .articleInfo .userInfo .userPhoto {
+    width: 200px;
+    height: 200px;
+    border-radius: 100%;
+    margin-right: 50px;
+  }
+  .artcileMainText .artcileMainText-content .articleInfo .userInfo .userName {
+    font-weight: 700;
+    font-size: 32px;
+    margin-bottom: 25px;
+  }
+  .artcileMainText .artcileMainText-content .articleInfo .userInfo .description {
+    font-family: "Lato", sans-serif;
+    color: #4d4d4d;
+    font-size: 21px;
+  }
+  .relatedPosts {
+    padding-top: 100px;
+    padding-bottom: 150px;
+  }
+  .relatedPosts .relatedPosts-title {
+    font-weight: 700;
+    font-size: 38px;
+    text-align: center;
+    margin-bottom: 110px;
+  }
+  .relatedPosts .foodPosts-content {
+    display: flex;
+    justify-content: space-between;
+  }
+  .relatedPosts .foodPosts-content .dishPost {
+    width: calc(50% - 15px);
+  }
+  .relatedPosts .foodPosts-content .dishPost .dishPhotoWrapper {
+    position: relative;
+  }
+  .relatedPosts .foodPosts-content .dishPost .dishPhotoWrapper::after {
+    font-size: 17px;
+    width: 125px;
+    height: 35px;
+  }
+  .relatedPosts .foodPosts-content .dishPost .mainPostInfo {
+    width: 88%;
+    margin: 0 auto;
+  }
+  .relatedPosts .foodPosts-content .dishPost .postInfo {
+    display: flex;
+    align-items: center;
+    margin-bottom: 35px;
+  }
+  .relatedPosts .foodPosts-content .dishPost .postInfo .userPhoto {
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+    margin-right: 5px;
+  }
+  .relatedPosts .foodPosts-content .dishPost .postInfo .additionalInfo {
+    font-family: "Lato", sans-serif;
+    font-size: 14px;
+    color: #5e6600;
+  }
+  .relatedPosts .foodPosts-content .dishPost .postInfo .circle {
+    font-size: 14px;
+  }
+  .relatedPosts .foodPosts-content .dishPost .postTitle {
+    font-size: 25px;
+    margin-bottom: 12px;
+  }
+  .relatedPosts .foodPosts-content .dishPost .line {
+    width: 100%;
+    border: 2px dashed black;
+    margin-bottom: 24px;
+  }
+  .relatedPosts .foodPosts-content .dishPost .postText {
+    font-size: 17px;
+    font-family: "Lato", sans-serif;
+    font-weight: 700;
+    color: #4d4d4d;
+    margin-bottom: 35px;
+  }
+  .relatedPosts .foodPosts-content .dishPost .readMore {
+    display: inline-block;
+    position: relative;
+    color: black;
+    font-family: "Lato", sans-serif;
+    font-size: 18px;
+  }
+  .relatedPosts .foodPosts-content .dishPost .readMore::after {
+    content: "";
+    position: absolute;
+    top: 2px;
+    transform: rotate(180deg);
+    right: -45px;
+    display: block;
+    transition: 0.3s;
+  }
+  .relatedPosts .foodPosts-content .dishPost .readMore:hover::after {
+    right: -52px;
+  }
+}
+@media (max-width: 480px) {
+  header {
+    padding-bottom: 70px;
+  }
+  header .subheader {
+    width: 100%;
+    margin-top: 100px;
+  }
+  header .subheader .title {
+    max-width: 660px;
+  }
+  header .subheader h1 {
+    font-size: 50px;
+  }
+  header .subheader .postInfo .userPhoto {
+    width: 90px;
+    height: 90px;
+  }
+  header .subheader .postInfo .additionalInfo {
+    font-size: 16px;
+  }
+  header .subheader .postInfo .circle {
+    font-size: 14px;
+    margin: 0 6px;
+  }
+  .specialWrapper {
+    max-width: 365px;
+    margin: 0 auto;
+  }
+  .artcileMainText {
+    padding-top: 100px;
+    padding-bottom: 110px;
+  }
+  .artcileMainText .line {
+    position: relative;
+  }
+  .artcileMainText .line::after {
+    bottom: -110px;
+  }
+  .artcileMainText .artcileMainText-content .pageLink {
+    margin-bottom: 45px;
+  }
+  .artcileMainText .artcileMainText-content .pageLink p {
+    font-size: 17px;
+  }
+  .artcileMainText .artcileMainText-content .titleText {
+    font-size: 23px;
+    margin-bottom: 65px;
+  }
+  .artcileMainText .artcileMainText-content .articleText {
+    font-size: 18px;
+    margin-bottom: 45px;
+  }
+  .artcileMainText .artcileMainText-content .articleText:last-child {
+    margin-bottom: 90px;
+  }
+  .artcileMainText .artcileMainText-content .articleInfo .dishPhotos {
+    margin-bottom: 55px;
+    flex-direction: column;
+    gap: 35px 0;
+  }
+  .artcileMainText .artcileMainText-content .articleInfo .dishPhotos img {
+    width: 100%;
+  }
+  .artcileMainText .artcileMainText-content .articleInfo .authorWords {
+    padding: 90px 0;
+    margin-bottom: 70px;
+  }
+  .artcileMainText .artcileMainText-content .articleInfo .authorWords blockquote {
+    font-size: 19px;
+  }
+  .artcileMainText .artcileMainText-content .articleInfo .authorWords blockquote::after {
+    top: -18px;
+    width: 120px;
+    height: 120px;
+  }
+  .artcileMainText .artcileMainText-content .articleInfo .tags {
+    margin: 95px 0;
+  }
+  .artcileMainText .artcileMainText-content .articleInfo .tags p {
+    font-size: 25px;
+    font-weight: 700;
+  }
+  .artcileMainText .artcileMainText-content .articleInfo .tags ul {
+    display: flex;
+    margin-left: 15px;
+    gap: 10px 20px;
+  }
+  .artcileMainText .artcileMainText-content .articleInfo .tags ul li {
+    padding: 5px 13px;
+    border: 2px solid black;
+    font-size: 16px;
+    font-family: "Lato", sans-serif;
+  }
+  .artcileMainText .artcileMainText-content .articleInfo .userInfo .userPhoto {
+    width: 140px;
+    height: 140px;
+    margin-right: 25px;
+  }
+  .artcileMainText .artcileMainText-content .articleInfo .userInfo .userName {
+    font-size: 25px;
+    margin-bottom: 12px;
+  }
+  .artcileMainText .artcileMainText-content .articleInfo .userInfo .description {
+    font-family: "Lato", sans-serif;
+    color: #4d4d4d;
+    font-size: 17px;
+  }
+  .relatedPosts {
+    padding-top: 100px;
+    padding-bottom: 150px;
+  }
+  .relatedPosts .relatedPosts-title {
+    font-weight: 700;
+    font-size: 38px;
+    text-align: center;
+    margin-bottom: 110px;
+  }
+  .relatedPosts .foodPosts-content {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    gap: 85px 0;
+  }
+  .relatedPosts .foodPosts-content .dishPost {
+    width: 95%;
+  }
+  .relatedPosts .foodPosts-content .dishPost .dishPhotoWrapper::after {
+    font-size: 19px;
+    width: 130px;
+    height: 40px;
+  }
+  .relatedPosts .foodPosts-content .dishPost .postInfo {
+    align-items: center;
+  }
+  .relatedPosts .foodPosts-content .dishPost .postInfo .userPhoto {
+    width: 68px;
+    height: 68px;
+    margin-right: 10px;
+  }
+  .relatedPosts .foodPosts-content .dishPost .postInfo .additionalInfo {
+    font-size: 15px;
+  }
+  .relatedPosts .foodPosts-content .dishPost .postTitle {
+    font-size: 27px;
+  }
+  .relatedPosts .foodPosts-content .dishPost .postText {
+    font-size: 18px;
+    margin-bottom: 35px;
+  }
+  .relatedPosts .foodPosts-content .dishPost .readMore {
+    font-size: 21px;
+  }
+}
+@media (max-width: 442px) {
+  .artcileMainText .artcileMainText-content .articleInfo .userInfo {
+    flex-direction: column;
+  }
+  .artcileMainText .artcileMainText-content .articleInfo .userInfo .userPhoto {
+    width: 155px;
+    height: 155px;
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+  .artcileMainText .artcileMainText-content .articleInfo .userInfo .userName {
+    font-size: 28px;
+    margin-bottom: 18px;
+    text-align: center;
+  }
+  .artcileMainText .artcileMainText-content .articleInfo .userInfo .description {
+    text-align: center;
+    font-size: 18px;
+  }
+  .relatedPosts {
+    padding-top: 100px;
+    padding-bottom: 150px;
+  }
+  .relatedPosts .relatedPosts-title {
+    font-weight: 700;
+    font-size: 38px;
+    text-align: center;
+    margin-bottom: 110px;
+  }
+  .relatedPosts .foodPosts-content {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    gap: 85px 0;
+  }
+  .relatedPosts .foodPosts-content .dishPost {
+    width: 100%;
+  }
+  .relatedPosts .foodPosts-content .dishPost .mainPostInfo {
+    width: 100%;
+  }
+  .relatedPosts .foodPosts-content .dishPost .postTitle {
+    font-size: 28px;
+  }
+}
+@media (max-width: 320px) {
+  header {
+    padding-bottom: 55px;
+  }
+  header .subheader {
+    width: 100%;
+    margin-top: 100px;
+  }
+  header .subheader .title {
+    max-width: 660px;
+  }
+  header .subheader h1 {
+    font-size: 37px;
+  }
+  header .subheader .postInfo .userPhoto {
+    width: 70px;
+    height: 70px;
+  }
+  header .subheader .postInfo .additionalInfo {
+    font-size: 14px;
+  }
+  header .subheader .postInfo .circle {
+    font-size: 14px;
+    margin: 0 3px;
+  }
+  .specialWrapper {
+    max-width: 287px;
+    margin: 0 auto;
+  }
+  .artcileMainText {
+    padding-top: 100px;
+    padding-bottom: 110px;
+  }
+  .artcileMainText .line {
+    position: relative;
+  }
+  .artcileMainText .line::after {
+    bottom: -110px;
+  }
+  .artcileMainText .artcileMainText-content .pageLink {
+    margin-bottom: 45px;
+  }
+  .artcileMainText .artcileMainText-content .pageLink p {
+    font-size: 16px;
+  }
+  .artcileMainText .artcileMainText-content .titleText {
+    font-size: 20px;
+    margin-bottom: 45px;
+  }
+  .artcileMainText .artcileMainText-content .articleText {
+    font-size: 17px;
+    line-height: 29px;
+    margin-bottom: 35px;
+  }
+  .artcileMainText .artcileMainText-content .articleText:last-child {
+    margin-bottom: 70px;
+  }
+  .artcileMainText .artcileMainText-content .articleInfo .dishPhotos {
+    margin-bottom: 45px;
+  }
+  .artcileMainText .artcileMainText-content .articleInfo .authorWords {
+    padding: 75px 0;
+    margin-bottom: 55px;
+  }
+  .artcileMainText .artcileMainText-content .articleInfo .authorWords blockquote {
+    font-size: 16px;
+    line-height: 22px;
+  }
+  .artcileMainText .artcileMainText-content .articleInfo .authorWords blockquote::after {
+    top: -18px;
+    width: 100px;
+    height: 100px;
+  }
+  .artcileMainText .artcileMainText-content .articleInfo .tags {
+    margin: 85px 0;
+  }
+  .artcileMainText .artcileMainText-content .articleInfo .tags p {
+    font-size: 25px;
+    font-weight: 700;
+  }
+  .artcileMainText .artcileMainText-content .articleInfo .tags ul {
+    display: flex;
+    margin-left: 15px;
+    gap: 10px 13px;
+  }
+  .artcileMainText .artcileMainText-content .articleInfo .tags ul li {
+    padding: 4px 10px;
+    border: 2px solid black;
+    font-size: 16px;
+    font-family: "Lato", sans-serif;
+  }
+  .artcileMainText .artcileMainText-content .articleInfo .userInfo .userPhoto {
+    width: 140px;
+    height: 140px;
+    margin-right: 25px;
+  }
+  .artcileMainText .artcileMainText-content .articleInfo .userInfo .userName {
+    font-size: 25px;
+    margin-bottom: 12px;
+  }
+  .artcileMainText .artcileMainText-content .articleInfo .userInfo .description {
+    font-family: "Lato", sans-serif;
+    color: #4d4d4d;
+    font-size: 17px;
+  }
+  .relatedPosts {
+    padding-top: 100px;
+    padding-bottom: 150px;
+  }
+  .relatedPosts .relatedPosts-title {
+    font-weight: 700;
+    font-size: 38px;
+    text-align: center;
+    margin-bottom: 110px;
+  }
+  .relatedPosts .foodPosts-content {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    gap: 85px 0;
+  }
+  .relatedPosts .foodPosts-content .dishPost {
+    width: 100%;
+  }
+  .relatedPosts .foodPosts-content .dishPost .dishPhotoWrapper::after {
+    font-size: 17px;
+    width: 110px;
+    height: 32px;
+  }
+  .relatedPosts .foodPosts-content .dishPost .mainPostInfo {
+    width: 100%;
+  }
+  .relatedPosts .foodPosts-content .dishPost .postInfo .additionalInfo {
+    font-size: 14px;
+  }
+  .relatedPosts .foodPosts-content .dishPost .postTitle {
+    font-size: 26px;
+  }
+  .relatedPosts .foodPosts-content .dishPost .postText {
+    font-size: 17px;
+  }
+  .relatedPosts .foodPosts-content .dishPost .readMore {
+    font-size: 19px;
+  }
+}
+
+/*# sourceMappingURL=articleAnother.css.map */

@@ -1,0 +1,318 @@
+@use "./mixins" as *;
+
+header {
+    display: block;
+    @include setBackgroundImage(
+        "../images/foodDescription/foodDescBg.png",
+        "cover"
+    );
+    margin: 0;
+    padding-bottom: 300px;
+    .headerContent {
+        margin-bottom: 170px;
+    }
+    .subheader {
+        display: flex;
+        justify-content: center;
+        h1 {
+            max-width: 1180px;
+            text-align: center;
+            font-size: 95px;
+            font-weight: 700;
+        }
+    }
+}
+
+// ===== DIFFERENT FOOD =====
+
+.foodTypes {
+    padding-top: 25px;
+    padding-bottom: 170px;
+    overflow-x: hidden;
+    .description {
+        max-width: 385px;
+        h2 {
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+        p {
+            font-family: "Lato", sans-serif;
+            font-size: 18px;
+            line-height: 32.6px;
+            color: #4d4d4d;
+            margin-bottom: 15px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+    .mintDrink {
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        z-index: 5;
+        transform: translateY(150px);
+        img {
+            width: 31%;
+        }
+        .description {
+            margin-right: 85px;
+        }
+    }
+    .bestSalmon {
+        margin-bottom: 45px;
+        .bestSalmon-mainContent {
+            display: flex;
+            justify-content: flex-end;
+            align-items: flex-end;
+            margin-bottom: 55px;
+            img {
+                width: 52%;
+            }
+            .description {
+                margin-bottom: 65px;
+                margin-left: 40px;
+            }
+        }
+        .salmonBottomDesc {
+            max-width: 361px;
+            margin: 0 auto;
+            font-family: "Lato", sans-serif;
+            font-size: 18px;
+            line-height: 32.6px;
+            color: #4d4d4d;
+        }
+    }
+    .suggestions {
+        .description {
+            margin: 0 auto;
+            margin-bottom: 55px;
+        }
+        img {
+            width: 100%;
+        }
+    }
+}
+
+// ===== PAGE SWITCHER =====
+
+.pageSwitcher {
+    overflow-x: hidden;
+    background-color: #ebf0e4;
+    padding: 125px 0;
+    .pageSwitcher-content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .switch {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 15px;
+            p {
+                display: inline-block;
+                position: relative;
+                text-align: center;
+                text-transform: uppercase;
+                font-family: "Lato", sans-serif;
+                color: #233000;
+                font-size: 14px;
+                &::before {
+                    content: "";
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    left: -35px;
+                    display: block;
+                    width: 25px;
+                    height: 12px;
+                    @include setBackgroundImage("../icons/arrow.svg");
+                    transition: 0.3s;
+                }
+            }
+        }
+        .previousPage,
+        .nextPage {
+            h3 {
+                font-size: 24px;
+            }
+        }
+        .previousPage {
+            &:hover p::before {
+                left: -40px;
+            }
+        }
+        .nextPage {
+            .switch {
+                &:hover p::before {
+                    right: -40px;
+                }
+                p {
+                    &::before {
+                        transform: translateY(-50%) rotate(180deg);
+                        left: auto;
+                        right: -35px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+    .foodTypes {
+        .mintDrink {
+            .description {
+                margin-right: 25px;
+            }
+        }
+    }
+}
+@media (max-width: 768px) {
+    header {
+        padding-bottom: 200px;
+
+        .subheader {
+            h1 {
+                font-size: 75px;
+            }
+        }
+    }
+
+    // ===== DIFFERENT FOOD =====
+
+    .foodTypes {
+        padding-top: 130px;
+        padding-bottom: 150px;
+        .description {
+            max-width: 385px;
+            h2 {
+                font-size: 36px;
+                font-weight: 700;
+                margin-bottom: 10px;
+            }
+            p {
+                font-family: "Lato", sans-serif;
+                font-size: 18px;
+                line-height: 32.6px;
+                color: #4d4d4d;
+                margin-bottom: 15px;
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+        .mintDrink {
+            display: flex;
+            justify-content: space-between;
+            transform: translateY(0);
+            margin-bottom: 85px;
+            img {
+                width: 46%;
+            }
+            .description {
+                width: 46%;
+                margin-right: 0;
+            }
+        }
+        .bestSalmon {
+            margin-bottom: 65px;
+            .bestSalmon-mainContent {
+                display: flex;
+                flex-direction: column-reverse;
+                justify-content: normal;
+                align-items: center;
+                margin-bottom: 35px;
+                img {
+                    width: 60%;
+                }
+                .description {
+                    text-align: center;
+                    max-width: 100%;
+                    margin-bottom: 35px;
+                    margin-left: 0px;
+                }
+            }
+        }
+        .suggestions {
+            .description {
+                margin: 0 auto;
+                margin-bottom: 55px;
+            }
+            img {
+                width: 100%;
+            }
+        }
+    }
+
+    // ===== PAGE SWITCHER =====
+
+    .pageSwitcher {
+        padding: 100px 0;
+        .pageSwitcher-content {
+            flex-direction: column;
+            align-items: center;
+            justify-content: normal;
+            .switch {
+                display: flex;
+                justify-content: center;
+                margin-bottom: 10px;
+            }
+            .back {
+                margin: 35px 0;
+            }
+            .previousPage,
+            .nextPage {
+                h3 {
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 480px) {
+    header {
+        padding-bottom: 150px;
+
+        .subheader {
+            h1 {
+                font-size: 62px;
+            }
+        }
+    }
+
+    // ===== DIFFERENT FOOD =====
+
+    .foodTypes {
+        padding-top: 120px;
+        padding-bottom: 100px;
+
+        .mintDrink {
+            flex-direction: column-reverse;
+            margin-bottom: 85px;
+            img {
+                width: 70%;
+                margin: 0 auto;
+            }
+            .description {
+                margin: 0 auto;
+                width: 100%;
+                text-align: center;
+                margin-bottom: 55px;
+                h2 {
+                    margin-bottom: 20px;
+                }
+            }
+        }
+    }
+
+    // ===== PAGE SWITCHER =====
+
+    .pageSwitcher {
+        .pageSwitcher-content {
+            .back {
+                margin: 45px 0;
+            }
+        }
+    }
+}

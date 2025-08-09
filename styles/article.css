@@ -1,0 +1,1048 @@
+header {
+  display: block;
+  background-image: url(../images/article/articleHeaderBg.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  margin: 0;
+  padding-bottom: 135px;
+}
+header .subheader {
+  max-width: 965px;
+  margin: 0 auto;
+  margin-top: 120px;
+}
+header .subheader h1 {
+  font-size: 85px;
+  font-weight: 700;
+  margin-bottom: 25px;
+}
+header .subheader .postInfo {
+  display: flex;
+  align-items: center;
+}
+header .subheader .postInfo .userPhoto {
+  width: 105px;
+  height: 105px;
+  border-radius: 100%;
+  margin-right: 5px;
+}
+header .subheader .postInfo .additionalInfo {
+  font-family: "Lato", sans-serif;
+  font-size: 17px;
+  color: #fff;
+}
+header .subheader .postInfo .circle {
+  font-size: 14px;
+  margin: 0 15px;
+}
+
+.artcileMainText {
+  padding: 100px 0;
+}
+.artcileMainText .artcileMainText-content {
+  display: grid;
+  grid-template-columns: 1fr 275px;
+  gap: 0px 45px;
+  position: relative;
+}
+.artcileMainText .artcileMainText-content .pageLink {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 65px;
+}
+.artcileMainText .artcileMainText-content .pageLink p {
+  font-size: 20px;
+  font-family: "Lato", sans-serif;
+}
+.artcileMainText .artcileMainText-content .pageLink p .unactiveLink {
+  font-family: "Lato", sans-serif;
+  color: #b0b0b0;
+}
+.artcileMainText .artcileMainText-content .pageLink p .activeLink {
+  font-family: "Lato", sans-serif;
+  color: #4d4d4d;
+}
+.artcileMainText .artcileMainText-content .pageLink .asideBurger {
+  display: none;
+  position: relative;
+  aspect-ratio: 1/1;
+}
+.artcileMainText .artcileMainText-content .pageLink .asideBurger span {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: black;
+}
+.artcileMainText .artcileMainText-content .pageLink .asideBurger::before, .artcileMainText .artcileMainText-content .pageLink .asideBurger::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: black;
+  transition: 0.4s;
+}
+.artcileMainText .artcileMainText-content .pageLink .asideBurger::before {
+  top: 0;
+}
+.artcileMainText .artcileMainText-content .pageLink .asideBurger::after {
+  bottom: 0;
+}
+.artcileMainText .artcileMainText-content .pageLink .asideBurger.active span {
+  display: none;
+}
+.artcileMainText .artcileMainText-content .pageLink .asideBurger.active::before {
+  top: 50%;
+  rotate: 45deg;
+  translate: 0 -50%;
+}
+.artcileMainText .artcileMainText-content .pageLink .asideBurger.active::after {
+  bottom: 50%;
+  rotate: -45deg;
+  translate: 0 50%;
+}
+.artcileMainText .artcileMainText-content .articleText {
+  color: #4d4d4d;
+  font-family: "Lato", sans-serif;
+  font-size: 20px;
+  margin-bottom: 75px;
+  line-height: 32.6px;
+}
+.artcileMainText .artcileMainText-content .articleText:last-child {
+  margin-bottom: 150px;
+}
+.artcileMainText .artcileMainText-content .articleInfo .dishIdeas {
+  display: grid;
+  align-items: stretch;
+  max-height: 660px;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 330px 330px;
+  gap: 50px 45px;
+  margin-bottom: 100px;
+}
+.artcileMainText .artcileMainText-content .articleInfo .dishIdeas img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.artcileMainText .artcileMainText-content .articleInfo .dishIdeas .bigElem {
+  grid-column: 1/2;
+  grid-row: 1/3;
+}
+.artcileMainText .artcileMainText-content .articleInfo .underDish {
+  max-width: 800px;
+  margin-bottom: 150px;
+}
+.artcileMainText .artcileMainText-content .articleInfo .authorWords {
+  display: block;
+  position: relative;
+  max-width: 835px;
+  margin: 0 auto;
+  font-family: "Lato", sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+  color: #5e6600;
+  margin-bottom: 150px;
+}
+.artcileMainText .artcileMainText-content .articleInfo .authorWords::after {
+  content: "";
+  position: absolute;
+  right: 0px;
+  top: -32px;
+  z-index: -1;
+  display: block;
+  width: 195px;
+  height: 195px;
+  background-image: url(../icons/quote.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.artcileMainText .artcileMainText-content .articleInfo .tags {
+  display: flex;
+  align-items: center;
+  margin-bottom: 100px;
+}
+.artcileMainText .artcileMainText-content .articleInfo .tags p {
+  font-size: 25px;
+  font-weight: 700;
+}
+.artcileMainText .artcileMainText-content .articleInfo .tags ul {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 15px;
+  gap: 0 20px;
+}
+.artcileMainText .artcileMainText-content .articleInfo .tags ul li {
+  padding: 5px 13px;
+  border: 2px solid black;
+  font-size: 16px;
+  font-family: "Lato", sans-serif;
+}
+.artcileMainText .artcileMainText-content .articleInfo .authorInfo {
+  display: flex;
+  align-items: center;
+  overflow-x: hidden;
+}
+.artcileMainText .artcileMainText-content .articleInfo .authorInfo .userPhoto {
+  width: 200px;
+  height: 200px;
+  border-radius: 100%;
+  margin-right: 50px;
+}
+.artcileMainText .artcileMainText-content .articleInfo .authorInfo .userName {
+  font-weight: 700;
+  font-size: 32px;
+  margin-bottom: 25px;
+}
+.artcileMainText .artcileMainText-content .articleInfo .authorInfo .description {
+  font-family: "Lato", sans-serif;
+  color: #4d4d4d;
+  font-size: 21px;
+}
+.artcileMainText .artcileMainText-content aside .search {
+  width: 100%;
+  margin-bottom: 150px;
+  font-family: "Lato", sans-serif;
+  padding-bottom: 4px;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  border-bottom: 2px solid black;
+}
+.artcileMainText .artcileMainText-content aside .search::placeholder {
+  font-size: 18px;
+  font-family: "Lato", sans-serif;
+  color: black;
+}
+.artcileMainText .artcileMainText-content aside .subtopic {
+  margin-bottom: 150px;
+}
+.artcileMainText .artcileMainText-content aside .subtopic:last-child {
+  margin-bottom: 0;
+}
+.artcileMainText .artcileMainText-content aside .subtopic h3 {
+  font-size: 24px;
+  padding-bottom: 6px;
+  font-weight: 700;
+}
+.artcileMainText .artcileMainText-content aside .subtopic .subtopicLine {
+  height: 3px;
+  width: 100%;
+  border-bottom: 3px dashed black;
+  margin-bottom: 20px;
+}
+.artcileMainText .artcileMainText-content aside .categories ul li,
+.artcileMainText .artcileMainText-content aside .archives ul li {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 25px;
+}
+.artcileMainText .artcileMainText-content aside .categories ul li:last-child,
+.artcileMainText .artcileMainText-content aside .archives ul li:last-child {
+  margin-bottom: 0;
+}
+.artcileMainText .artcileMainText-content aside .categories ul li p,
+.artcileMainText .artcileMainText-content aside .archives ul li p {
+  font-family: "Lato", sans-serif;
+  font-size: 18px;
+}
+.artcileMainText .artcileMainText-content aside .comments .comment {
+  display: flex;
+  margin-bottom: 20px;
+}
+.artcileMainText .artcileMainText-content aside .comments .comment:last-child {
+  margin-bottom: 0;
+}
+.artcileMainText .artcileMainText-content aside .comments .comment p,
+.artcileMainText .artcileMainText-content aside .comments .comment span {
+  font-family: "Lato", sans-serif;
+  font-size: 16px;
+}
+.artcileMainText .artcileMainText-content aside .comments .comment .userName {
+  color: #b0b0b0;
+}
+.artcileMainText .artcileMainText-content aside .recentPosted .article {
+  display: flex;
+  align-items: center;
+  margin-bottom: 25px;
+}
+.artcileMainText .artcileMainText-content aside .recentPosted .article:last-child {
+  margin-bottom: 0;
+}
+.artcileMainText .artcileMainText-content aside .recentPosted .article .articleImg {
+  width: 70px;
+  height: 70px;
+  margin-right: 15px;
+}
+.artcileMainText .artcileMainText-content aside .recentPosted .article .articleTitle {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+.artcileMainText .artcileMainText-content aside .recentPosted .article .articleInfo {
+  display: flex;
+  align-items: center;
+}
+.artcileMainText .artcileMainText-content aside .recentPosted .article .articleInfo,
+.artcileMainText .artcileMainText-content aside .recentPosted .article .articleInfo span {
+  color: #b0b0b0;
+  font-family: "Lato", sans-serif;
+  font-size: 13px;
+}
+.artcileMainText .artcileMainText-content aside .recentPosted .article .articleInfo .circle {
+  font-size: 8px;
+  margin: 0 5px;
+}
+.artcileMainText .artcileMainText-content aside .tags p {
+  font-size: 25px;
+  font-weight: 700;
+}
+.artcileMainText .artcileMainText-content aside .tags ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 10px;
+}
+.artcileMainText .artcileMainText-content aside .tags ul li {
+  padding: 8px 9px;
+  border: 2px solid black;
+  font-size: 16px;
+  font-family: "Lato", sans-serif;
+}
+
+.switchArticle {
+  display: flex;
+  justify-content: space-between;
+  overflow-x: hidden;
+}
+.switchArticle .previousArticle,
+.switchArticle .nextArticle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: calc(50% - 2px);
+  height: 280px;
+  color: white;
+}
+.switchArticle .previousArticle::before,
+.switchArticle .nextArticle::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.switchArticle .previousArticle .switcherInfo,
+.switchArticle .nextArticle .switcherInfo {
+  position: absolute;
+}
+.switchArticle .previousArticle .switcherInfo .switcher,
+.switchArticle .nextArticle .switcherInfo .switcher {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 18px;
+}
+.switchArticle .previousArticle .switcherInfo .switcher svg,
+.switchArticle .nextArticle .switcherInfo .switcher svg {
+  width: 30px;
+  height: 30px;
+}
+.switchArticle .previousArticle .switcherInfo .switcher a,
+.switchArticle .nextArticle .switcherInfo .switcher a {
+  position: relative;
+  text-transform: uppercase;
+  font-family: "Lato", sans-serif;
+}
+.switchArticle .previousArticle .switcherInfo .articleTitle,
+.switchArticle .nextArticle .switcherInfo .articleTitle {
+  font-size: 25px;
+  max-width: 485px;
+  text-align: center;
+}
+.switchArticle .previousArticle img,
+.switchArticle .nextArticle img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 0 35%;
+}
+.switchArticle .previousArticle .switcher svg {
+  margin-right: 10px;
+}
+.switchArticle .nextArticle .switcher svg {
+  transform: rotate(180deg);
+  margin-left: 10px;
+}
+
+.specialWrapper {
+  max-width: 1055px;
+  margin: 0 auto;
+}
+
+.commentsWrapper {
+  padding-top: 110px;
+  padding-bottom: 100px;
+  border-bottom: 3px dashed black;
+}
+.commentsWrapper h2 {
+  font-size: 34px;
+  text-align: center;
+  margin-bottom: 75px;
+}
+.commentsWrapper .mainComments .mainComment {
+  margin-bottom: 45px;
+}
+.commentsWrapper .mainComments .mainComment:last-child {
+  margin-bottom: 0;
+}
+.commentsWrapper .mainComments .mainComment .userInfo {
+  display: flex;
+}
+.commentsWrapper .mainComments .mainComment .userInfo h3,
+.commentsWrapper .mainComments .mainComment .userInfo p,
+.commentsWrapper .mainComments .mainComment .userInfo a {
+  font-family: "Lato", sans-serif;
+}
+.commentsWrapper .mainComments .mainComment .userInfo img {
+  width: 75px;
+  height: 75px;
+  margin-right: 15px;
+}
+.commentsWrapper .mainComments .mainComment .userInfo .mainInfo {
+  display: block;
+  width: 100%;
+  margin-top: 5px;
+}
+.commentsWrapper .mainComments .mainComment .userInfo .userNameWr {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.commentsWrapper .mainComments .mainComment .userInfo .userNameWr a {
+  color: black;
+  font-weight: 700;
+}
+.commentsWrapper .mainComments .mainComment .userInfo .postDate {
+  color: #b0b0b0;
+}
+.commentsWrapper .mainComments .mainComment .userInfo .commentText {
+  font-size: 20px;
+  color: #4d4d4d;
+  margin-top: 20px;
+}
+.commentsWrapper .mainComments .replyedComment {
+  margin-left: 90px;
+}
+
+.leaveReply {
+  padding-top: 110px;
+  padding-bottom: 175px;
+}
+.leaveReply h2 {
+  font-size: 34px;
+  text-align: center;
+  margin-bottom: 95px;
+}
+.leaveReply .leaveReplyForm {
+  margin-bottom: 35px;
+}
+.leaveReply .leaveReplyForm:nth-child(4) {
+  margin-bottom: 80px;
+}
+.leaveReply .leaveReplyForm h3 {
+  font-family: "Lato", sans-serif;
+  margin-bottom: 15px;
+}
+.leaveReply .leaveReplyForm textarea,
+.leaveReply .leaveReplyForm input {
+  border: 3px solid black;
+  outline: none;
+  color: black;
+  font-family: "Lato", sans-serif;
+  font-size: 22px;
+  padding-left: 10px;
+}
+.leaveReply .leaveReplyForm input {
+  width: 100%;
+  height: 65px;
+}
+.leaveReply .commentText textarea {
+  width: 100%;
+  min-height: 300px;
+  padding-top: 10px;
+}
+.leaveReply .leaveComment {
+  font-weight: 700;
+  font-size: 22px;
+  background-color: transparent;
+  border: 3px solid black;
+  padding: 15px 35px;
+  cursor: pointer;
+}
+
+@media (max-width: 1200px) {
+  header {
+    padding-bottom: 100px;
+  }
+  header .subheader h1 {
+    font-size: 85px;
+    font-weight: 700;
+    margin-bottom: 25px;
+  }
+  header .subheader .postInfo {
+    display: flex;
+    align-items: center;
+    margin-bottom: 35px;
+  }
+  header .subheader .postInfo .userPhoto {
+    width: 105px;
+    height: 105px;
+    border-radius: 100%;
+    margin-right: 5px;
+  }
+  header .subheader .postInfo .additionalInfo {
+    font-family: "Lato", sans-serif;
+    font-size: 17px;
+    color: #fff;
+  }
+  header .subheader .postInfo .circle {
+    font-size: 14px;
+    margin: 0 15px;
+  }
+}
+@media (max-width: 985px) {
+  header {
+    padding-bottom: 100px;
+  }
+  header .subheader {
+    max-width: 735px;
+  }
+  header .subheader h1 {
+    font-size: 72px;
+  }
+  .artcileMainText {
+    padding: 100px 0;
+  }
+  .artcileMainText .artcileMainText-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0px 45px;
+  }
+  .artcileMainText .artcileMainText-content .articleInfo .pageLink {
+    gap: 20px;
+  }
+  .artcileMainText .artcileMainText-content .articleInfo .pageLink .asideBurger {
+    display: flex;
+    align-items: center;
+    flex: 0 0 30px;
+  }
+  .artcileMainText .artcileMainText-content .articleInfo .dishIdeas img {
+    object-fit: cover;
+  }
+  .artcileMainText .artcileMainText-content aside {
+    position: absolute;
+    top: 50px;
+    right: -100%;
+    padding: 50px 20px;
+    border-radius: 20px 0 0 20px;
+    display: flex;
+    justify-content: center;
+    background-color: #fff;
+    z-index: 5;
+    transition: right 0.6s;
+  }
+  .artcileMainText .artcileMainText-content aside .asideWrapper {
+    max-width: 400px;
+  }
+  .artcileMainText .artcileMainText-content aside.activeAside {
+    right: 0;
+    box-shadow: -10px 20px 24px -1px rgba(0, 0, 0, 0.68);
+  }
+  .artcileMainText .artcileMainText-content aside .search {
+    margin-bottom: 100px;
+    font-size: 18px;
+  }
+  .artcileMainText .artcileMainText-content aside .search::placeholder {
+    font-size: 18px;
+  }
+  .artcileMainText .artcileMainText-content aside .subtopic {
+    margin-bottom: 100px;
+  }
+  .artcileMainText .artcileMainText-content aside .categories ul li,
+  .artcileMainText .artcileMainText-content aside .archives ul li {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+  }
+  .artcileMainText .artcileMainText-content aside .categories ul li:last-child,
+  .artcileMainText .artcileMainText-content aside .archives ul li:last-child {
+    margin-bottom: 0;
+  }
+  .artcileMainText .artcileMainText-content aside .categories ul li p,
+  .artcileMainText .artcileMainText-content aside .archives ul li p {
+    font-family: "Lato", sans-serif;
+    font-size: 18px;
+  }
+  .artcileMainText .artcileMainText-content aside .comments .comment {
+    display: flex;
+    margin-bottom: 20px;
+  }
+  .artcileMainText .artcileMainText-content aside .comments .comment:last-child {
+    margin-bottom: 0;
+  }
+  .artcileMainText .artcileMainText-content aside .comments .comment p,
+  .artcileMainText .artcileMainText-content aside .comments .comment span {
+    font-family: "Lato", sans-serif;
+    font-size: 16px;
+  }
+  .artcileMainText .artcileMainText-content aside .comments .comment .userName {
+    color: #b0b0b0;
+  }
+  .artcileMainText .artcileMainText-content aside .recentPosted .article {
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+  }
+  .artcileMainText .artcileMainText-content aside .recentPosted .article:last-child {
+    margin-bottom: 0;
+  }
+  .artcileMainText .artcileMainText-content aside .recentPosted .article .articleImg {
+    width: 70px;
+    height: 70px;
+    margin-right: 15px;
+  }
+  .artcileMainText .artcileMainText-content aside .recentPosted .article .articleTitle {
+    font-size: 16px;
+    margin-bottom: 5px;
+  }
+  .artcileMainText .artcileMainText-content aside .recentPosted .article .articleInfo {
+    display: flex;
+    align-items: center;
+  }
+  .artcileMainText .artcileMainText-content aside .recentPosted .article .articleInfo,
+  .artcileMainText .artcileMainText-content aside .recentPosted .article .articleInfo span {
+    color: #b0b0b0;
+    font-family: "Lato", sans-serif;
+    font-size: 13px;
+  }
+  .artcileMainText .artcileMainText-content aside .recentPosted .article .articleInfo .circle {
+    font-size: 8px;
+    margin: 0 5px;
+  }
+  .artcileMainText .artcileMainText-content aside .tags p {
+    font-size: 25px;
+    font-weight: 700;
+  }
+  .artcileMainText .artcileMainText-content aside .tags ul {
+    display: flex;
+    gap: 10px 10px;
+  }
+}
+@media (max-width: 768px) {
+  header {
+    padding-bottom: 130px;
+  }
+  header .subheader {
+    max-width: 560px;
+  }
+  header .subheader h1 {
+    font-size: 67px;
+    text-align: center;
+  }
+  header .subheader .postInfo .additionalInfo {
+    font-size: 16px;
+  }
+  header .subheader .postInfo .circle {
+    margin: 0 5px;
+  }
+  .switchArticle .previousArticle,
+  .switchArticle .nextArticle {
+    height: 250px;
+    color: white;
+  }
+  .switchArticle .previousArticle .switcherInfo .articleTitle,
+  .switchArticle .nextArticle .switcherInfo .articleTitle {
+    font-size: 22px;
+  }
+  .specialWrapper {
+    max-width: 555px;
+  }
+  .leaveReply {
+    padding-top: 110px;
+    padding-bottom: 155px;
+  }
+}
+@media (max-width: 605px) {
+  header {
+    padding-bottom: 130px;
+  }
+  header .subheader {
+    max-width: 560px;
+  }
+  header .subheader h1 {
+    font-size: 67px;
+    text-align: center;
+  }
+  header .subheader .postInfo .additionalInfo {
+    font-size: 16px;
+  }
+  header .subheader .postInfo .circle {
+    margin: 0 5px;
+  }
+  .artcileMainText {
+    padding: 100px 0;
+  }
+  .artcileMainText .artcileMainText-content .articleInfo .dishIdeas {
+    grid-template-columns: repeat(2, minmax(100px, 1fr));
+    grid-template-rows: 290px 290px;
+    gap: 35px;
+    margin-bottom: 85px;
+  }
+  .artcileMainText .artcileMainText-content .articleInfo .dishIdeas .bigElem {
+    grid-column: 1/3;
+    grid-row: 2/3;
+  }
+  .artcileMainText .artcileMainText-content .articleInfo .tags {
+    align-items: normal;
+  }
+  .specialWrapper {
+    max-width: 555px;
+  }
+  .leaveReply {
+    padding-top: 110px;
+    padding-bottom: 155px;
+  }
+}
+@media (max-width: 480px) {
+  header {
+    padding-bottom: 85px;
+  }
+  header .subheader h1 {
+    font-size: 50px;
+    margin-bottom: 25px;
+  }
+  header .subheader .postInfo .userPhoto {
+    width: 85px;
+    height: 85px;
+    margin-right: 5px;
+  }
+  header .subheader .postInfo .additionalInfo {
+    font-size: 15px;
+    line-height: 22px;
+  }
+  header .subheader .postInfo .circle {
+    font-size: 14px;
+    margin: 0 6px;
+  }
+  .artcileMainText {
+    padding: 100px 0;
+  }
+  .artcileMainText .artcileMainText-content .pageLink {
+    margin-bottom: 65px;
+  }
+  .artcileMainText .artcileMainText-content .pageLink p {
+    font-size: 18px;
+  }
+  .artcileMainText .artcileMainText-content .articleText {
+    color: #4d4d4d;
+    font-family: "Lato", sans-serif;
+    font-size: 18px;
+    margin-bottom: 75px;
+    line-height: 30.6px;
+  }
+  .artcileMainText .artcileMainText-content .articleText:last-child {
+    margin-bottom: 150px;
+  }
+  .artcileMainText .artcileMainText-content .articleInfo .dishIdeas {
+    margin-bottom: 65px;
+  }
+  .artcileMainText .artcileMainText-content .articleInfo .underDish {
+    margin-bottom: 100px;
+  }
+  .artcileMainText .artcileMainText-content .articleInfo .authorWords {
+    font-size: 23px;
+    margin-bottom: 100px;
+  }
+  .artcileMainText .artcileMainText-content .articleInfo .authorWords::after {
+    right: 0px;
+    top: -25px;
+    width: 145px;
+    height: 145px;
+  }
+  .artcileMainText .artcileMainText-content .articleInfo .tags {
+    margin-bottom: 75px;
+  }
+  .artcileMainText .artcileMainText-content .articleInfo .tags p {
+    font-size: 25px;
+    font-weight: 700;
+  }
+  .artcileMainText .artcileMainText-content .articleInfo .tags ul {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 15px;
+    gap: 10px 15px;
+  }
+  .artcileMainText .artcileMainText-content .articleInfo .tags ul li {
+    padding: 5px 13px;
+    border: 2px solid black;
+    font-size: 16px;
+    font-family: "Lato", sans-serif;
+  }
+  .artcileMainText .artcileMainText-content .articleInfo .userInfo .userPhoto {
+    width: 140px;
+    height: 140px;
+    margin-right: 25px;
+  }
+  .artcileMainText .artcileMainText-content .articleInfo .userInfo .userName {
+    font-size: 25px;
+    margin-bottom: 12px;
+  }
+  .artcileMainText .artcileMainText-content .articleInfo .userInfo .description {
+    font-family: "Lato", sans-serif;
+    color: #4d4d4d;
+    font-size: 17px;
+  }
+  .switchArticle {
+    flex-direction: column;
+    justify-content: normal;
+    gap: 4px 0;
+  }
+  .switchArticle .previousArticle,
+  .switchArticle .nextArticle {
+    width: 100%;
+    height: 250px;
+  }
+  .switchArticle .previousArticle .switcherInfo,
+  .switchArticle .nextArticle .switcherInfo {
+    padding: 0 15px;
+  }
+  .specialWrapper {
+    max-width: 425px;
+  }
+  .commentsWrapper {
+    padding-bottom: 85px;
+  }
+  .commentsWrapper h2 {
+    font-size: 34px;
+    text-align: center;
+    margin-bottom: 75px;
+  }
+  .commentsWrapper .mainComments .mainComment {
+    margin-bottom: 45px;
+  }
+  .commentsWrapper .mainComments .mainComment:last-child {
+    margin-bottom: 0;
+  }
+  .commentsWrapper .mainComments .mainComment .userInfo img {
+    width: 69px;
+    height: 69px;
+  }
+  .commentsWrapper .mainComments .mainComment .userInfo .userNameWr {
+    margin-bottom: 5px;
+  }
+  .commentsWrapper .mainComments .mainComment .userInfo .userNameWr h3 {
+    font-size: 17px;
+  }
+  .commentsWrapper .mainComments .mainComment .userInfo .userNameWr a {
+    font-size: 16px;
+  }
+  .commentsWrapper .mainComments .mainComment .userInfo .postDate {
+    font-size: 15px;
+  }
+  .commentsWrapper .mainComments .mainComment .userInfo .commentText {
+    font-size: 17px;
+    margin-top: 15px;
+  }
+  .commentsWrapper .mainComments .replyedComment {
+    margin-left: 40px;
+  }
+  .leaveReply {
+    padding-top: 100px;
+    padding-bottom: 175px;
+  }
+  .leaveReply h2 {
+    font-size: 34px;
+    text-align: center;
+    margin-bottom: 85px;
+  }
+  .leaveReply .leaveReplyForm {
+    margin-bottom: 35px;
+  }
+  .leaveReply .leaveReplyForm:nth-child(4) {
+    margin-bottom: 70px;
+  }
+  .leaveReply .leaveReplyForm h3 {
+    font-size: 18px;
+  }
+  .leaveReply .leaveReplyForm textarea,
+  .leaveReply .leaveReplyForm input {
+    border: 3px solid black;
+    outline: none;
+    color: black;
+    font-family: "Lato", sans-serif;
+    font-size: 20px;
+    padding-left: 10px;
+  }
+  .leaveReply .leaveReplyForm input {
+    width: 100%;
+    height: 55px;
+  }
+  .leaveReply .commentText textarea {
+    width: 100%;
+    min-height: 200px;
+    padding-top: 10px;
+  }
+  .leaveReply .leaveComment {
+    font-weight: 700;
+    font-size: 22px;
+    background-color: transparent;
+    border: 3px solid black;
+    padding: 15px 35px;
+    cursor: pointer;
+  }
+}
+@media (max-width: 442px) {
+  .artcileMainText {
+    padding: 100px 0;
+  }
+  .artcileMainText .artcileMainText-content .articleInfo .pageLink .asideBurger {
+    flex: 0 0 25px;
+  }
+  .artcileMainText .artcileMainText-content .articleInfo .authorWords::after {
+    width: 130px;
+    height: 130px;
+  }
+  .artcileMainText .artcileMainText-content .articleInfo .userInfo {
+    flex-direction: column;
+  }
+  .artcileMainText .artcileMainText-content .articleInfo .userInfo .userPhoto {
+    width: 155px;
+    height: 155px;
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+  .artcileMainText .artcileMainText-content .articleInfo .userInfo .userName {
+    font-size: 28px;
+    margin-bottom: 18px;
+    text-align: center;
+  }
+  .artcileMainText .artcileMainText-content .articleInfo .userInfo .description {
+    text-align: center;
+    font-size: 18px;
+  }
+  .artcileMainText .artcileMainText-content aside {
+    border-radius: 0;
+  }
+  .artcileMainText .artcileMainText-content aside.activeAside {
+    box-shadow: none;
+  }
+  .specialWrapper {
+    max-width: 375px;
+  }
+}
+@media (max-width: 320px) {
+  header {
+    padding-bottom: 85px;
+  }
+  header .subheader h1 {
+    font-size: 50px;
+    margin-bottom: 25px;
+  }
+  header .subheader .postInfo .userPhoto {
+    width: 85px;
+    height: 85px;
+    margin-right: 5px;
+  }
+  header .subheader .postInfo .additionalInfo {
+    font-size: 15px;
+    line-height: 22px;
+  }
+  header .subheader .postInfo .circle {
+    font-size: 14px;
+    margin: 0 6px;
+  }
+  .artcileMainText {
+    padding: 85px 0;
+  }
+  .artcileMainText .artcileMainText-content .pageLink {
+    margin-bottom: 45px;
+  }
+  .artcileMainText .artcileMainText-content .articleInfo .dishIdeas {
+    grid-template-rows: 250px 250px;
+    gap: 15px 15px;
+    margin-bottom: 65px;
+  }
+  .artcileMainText .artcileMainText-content .articleInfo .underDish {
+    margin-bottom: 75px;
+  }
+  .artcileMainText .artcileMainText-content .articleInfo .authorWords {
+    margin-bottom: 75px;
+  }
+  .artcileMainText .artcileMainText-content .articleInfo .tags {
+    margin-bottom: 65px;
+  }
+  .specialWrapper {
+    max-width: 287px;
+  }
+  .commentsWrapper .mainComments .mainComment .userInfo .userNameWr a {
+    font-size: 14px;
+  }
+  .commentsWrapper .mainComments .mainComment .userInfo .postDate {
+    font-size: 14px;
+  }
+  .commentsWrapper .mainComments .replyedComment {
+    margin-left: 40px;
+  }
+  .leaveReply {
+    padding-top: 100px;
+    padding-bottom: 175px;
+  }
+  .leaveReply h2 {
+    font-size: 34px;
+    text-align: center;
+    margin-bottom: 85px;
+  }
+  .leaveReply .leaveReplyForm {
+    margin-bottom: 35px;
+  }
+  .leaveReply .leaveReplyForm:nth-child(4) {
+    margin-bottom: 70px;
+  }
+  .leaveReply .leaveReplyForm h3 {
+    font-size: 18px;
+  }
+  .leaveReply .leaveReplyForm textarea,
+  .leaveReply .leaveReplyForm input {
+    border: 3px solid black;
+    outline: none;
+    color: black;
+    font-family: "Lato", sans-serif;
+    font-size: 20px;
+    padding-left: 10px;
+  }
+  .leaveReply .leaveReplyForm input {
+    width: 100%;
+    height: 55px;
+  }
+  .leaveReply .commentText textarea {
+    width: 100%;
+    min-height: 200px;
+    padding-top: 10px;
+  }
+  .leaveReply .leaveComment {
+    font-weight: 700;
+    font-size: 20px;
+    background-color: transparent;
+    border: 3px solid black;
+    padding: 13px 23px;
+    cursor: pointer;
+  }
+}
+
+/*# sourceMappingURL=article.css.map */

@@ -1,0 +1,423 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    font-family: "Rufina";
+    box-sizing: border-box;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+}
+.wrapper {
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+li {
+    list-style-type: none;
+}
+
+.routes {
+    padding: 150px 200px 0 200px;
+    position: absolute;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("../images/common/routesBg.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    z-index: 10;
+    transition: 0.7s;
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #233000;
+        opacity: 0.8;
+        z-index: -1;
+    }
+    .close {
+        display: flex;
+        align-items: center;
+        position: absolute;
+        top: 45px;
+        left: 70px;
+        width: 46px;
+        height: 46px;
+        cursor: pointer;
+        span,
+        &::after,
+        &::before {
+            display: block;
+            width: 100%;
+            height: 2px;
+            background-color: #fff;
+            transition: 0.2s;
+        }
+        &::after,
+        &::before {
+            content: "";
+            position: absolute;
+        }
+        &::after {
+            bottom: 50%;
+            transform: rotate(-45deg);
+            translate: 0 50%;
+        }
+
+        &::before {
+            top: 50%;
+            transform: rotate(45deg);
+            translate: 0 -50%;
+        }
+        span {
+            opacity: 0;
+        }
+    }
+    .routesBodyWrapper {
+        height: 100%;
+        overflow-y: auto;
+    }
+    .routesBody {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+    }
+
+    .links {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        gap: 20px;
+        li {
+            padding-left: 14px;
+            transition: 0.5s;
+            .linkTitle {
+                display: flex;
+                align-items: center;
+
+                .circle {
+                    display: block;
+                    font-size: 26px;
+                    margin-right: 10px;
+                }
+                a,
+                p {
+                    position: relative;
+                    color: white;
+                    font-family: "Rufina";
+                    font-size: 50px;
+                    font-weight: 700;
+                    text-transform: uppercase;
+                    cursor: pointer;
+                }
+            }
+            .activeLink {
+                a,
+                p,
+                .circle {
+                    color: #9caa00;
+                }
+            }
+
+            .subLinks {
+                overflow: hidden;
+                height: 0px;
+                margin: 0 0 0 15px;
+                transition: 0.6s;
+                li {
+                    height: auto;
+                    margin-bottom: 10px;
+                    .linkTitle {
+                        a {
+                            font-size: 19px;
+                        }
+                        .circle {
+                            font-size: 14px;
+                            margin-right: 5px;
+                        }
+                    }
+                }
+            }
+        }
+        .containSubList > .linkTitle {
+            p {
+                &::after,
+                &::before {
+                    content: "";
+                    position: absolute;
+                    top: 50%;
+                    right: -40px;
+                    width: 25px;
+                    height: 2px;
+                    background-color: #fff;
+                    transition: 0.3s;
+                }
+                &::before {
+                    transform: translateY(-50%) rotate(40deg);
+                    right: -58px;
+                }
+                &::after {
+                    transform: translateY(-50%) rotate(-40deg);
+                }
+            }
+        }
+        .containSubList > .activeLink {
+            p::after,
+            p::before {
+                background-color: #9caa00;
+            }
+        }
+        .activeSubList {
+            .subLinks {
+                margin: 10px 0 0 15px;
+            }
+        }
+        .activeSubList > .linkTitle {
+            p {
+                &::before {
+                    transform: translateY(-50%) rotate(140deg);
+                }
+                &::after {
+                    transform: translateY(-50%) rotate(-140deg);
+                }
+            }
+        }
+    }
+    .menuContacts {
+        &-title {
+            font-weight: 700;
+            font-size: 24px;
+            position: relative;
+            padding-bottom: 5px;
+            margin-bottom: 25px;
+            &::after {
+                content: "";
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                display: block;
+                width: 100%;
+                border: 2px dashed white;
+            }
+        }
+        p {
+            font-family: "Lato", sans-serif;
+        }
+        &-adress {
+            max-width: 200px;
+            line-height: 24px;
+            margin: 25px 0;
+        }
+
+        &-socialMedia {
+            display: flex;
+            gap: 0 20px;
+            li {
+                width: 30px;
+                height: 30px;
+                a {
+                    display: block;
+                }
+                img {
+                    width: 100%;
+                    height: 100%;
+                    filter: invert(100);
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1440px) {
+    html,
+    body {
+        overflow-x: hidden;
+    }
+    .routes {
+        padding: 150px 60px 0 70px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .routes {
+        padding: 150px 0 0 50px;
+        .close {
+            width: 40px;
+            height: 40px;
+            left: 35px;
+        }
+        .links {
+            li {
+                .linkTitle {
+                    a,
+                    p {
+                        font-size: 42px;
+                    }
+                }
+            }
+            .subLinks {
+                li {
+                    .linkTitle {
+                        a {
+                            font-size: 16px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+    .wrapper {
+        max-width: 1015px;
+    }
+    // ===== MAKING RESERVATION =====
+
+    .makingReservation {
+        padding: 130px 0;
+        .reservation {
+            .reservationForms {
+                .fieldWrapper {
+                    width: calc((100% / 3) - 25px);
+                }
+                .selectDate,
+                .selectTime,
+                .persoNumber {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 768px) {
+    .wrapper {
+        max-width: 675px;
+    }
+    // ===== MAKING RESERVATION =====
+
+    .makingReservation {
+        padding: 120px 0;
+        .reservationTitle {
+            margin-bottom: 75px;
+            h2 {
+                font-size: 52px;
+            }
+        }
+        .reservation {
+            .reservationForms {
+                flex-direction: column;
+                gap: 35px 0;
+                flex-wrap: wrap;
+                .fieldWrapper,
+                .field {
+                    width: 100%;
+                }
+            }
+        }
+    }
+    .routes {
+        .menuContacts {
+            &-title {
+                font-size: 24px;
+                margin-bottom: 18px;
+            }
+            &-adress {
+                margin: 15px 0;
+            }
+
+            &-socialMedia {
+                li {
+                    width: 25px;
+                    height: 25px;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 480px) {
+    .wrapper {
+        max-width: 425px;
+    }
+
+    // ===== MAKING RESERVATION =====
+
+    .makingReservation {
+        padding: 100px 0;
+        .reservationTitle {
+            margin-bottom: 75px;
+            h2 {
+                font-size: 47px;
+                margin-bottom: 15px;
+            }
+            p {
+                font-size: 18px;
+            }
+        }
+        .reservation {
+            .reservationForms {
+                margin-bottom: 65px;
+            }
+        }
+    }
+    .routes {
+        padding: 90px 0 0 30px;
+        .close {
+            top: 25px;
+            width: 35px;
+            height: 35px;
+        }
+        .routesBody {
+            flex-direction: column;
+            gap: 35px;
+            align-items: start;
+        }
+    }
+}
+@media (max-width: 442px) {
+    .wrapper {
+        max-width: 375px;
+    }
+
+    // ===== MAKING RESERVATION =====
+
+    .makingReservation {
+        padding: 85px 0;
+        .reservationTitle {
+            margin-bottom: 65px;
+            h2 {
+                font-size: 44px;
+            }
+            p {
+                font-size: 17px;
+            }
+        }
+        .reservation {
+            .reservationForms {
+                margin-bottom: 65px;
+                .field {
+                    height: 60px;
+                }
+            }
+            .booking {
+                width: 195px;
+                height: 55px;
+            }
+        }
+    }
+}
+
+@media (max-width: 320px) {
+    .wrapper {
+        max-width: 287px;
+    }
+}

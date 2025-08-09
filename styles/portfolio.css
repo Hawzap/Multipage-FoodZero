@@ -1,0 +1,331 @@
+header {
+  display: block;
+  background-image: url(../images/portfolio/portfolioHeaderBg.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  margin: 0;
+  padding-bottom: 305px;
+}
+header .headerContent {
+  margin-bottom: 170px;
+}
+header .subheader {
+  display: flex;
+  justify-content: center;
+}
+header .subheader h1 {
+  font-size: 95px;
+  font-weight: 700;
+}
+
+.allMenu {
+  padding-top: 75px;
+  padding-bottom: 95px;
+}
+.allMenu .menuCategories-wrapper {
+  margin-bottom: 50px;
+}
+.allMenu .menuCategories-wrapper .menuBurger {
+  display: none;
+}
+.allMenu .menuCategories-wrapper .menuCategories {
+  display: flex;
+  justify-content: center;
+}
+.allMenu .menuCategories-wrapper .menuCategories li {
+  font-family: "Lato", sans-serif;
+  font-size: 22px;
+  margin-right: 45px;
+  cursor: pointer;
+}
+.allMenu .menuCategories-wrapper .menuCategories li:last-child {
+  margin-right: 0;
+}
+.allMenu .menuCategories-wrapper .menuCategories .active {
+  padding-bottom: 4px;
+  border-bottom: 2px dashed black;
+}
+.allMenu .foodPhotos {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 35px;
+  margin-bottom: 85px;
+}
+.allMenu .foodPhotos .meal {
+  position: relative;
+  max-height: 750px;
+  overflow: hidden;
+  color: white;
+  cursor: pointer;
+}
+.allMenu .foodPhotos .meal .darkEffect {
+  position: absolute;
+  display: block;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: linear-gradient(180deg, rgba(35, 48, 0, 0), rgba(7, 7, 7, 0.7));
+  height: 280px;
+}
+.allMenu .foodPhotos .meal:nth-child(1), .allMenu .foodPhotos .meal:nth-child(4) {
+  grid-column: span 4;
+}
+.allMenu .foodPhotos .meal:nth-child(2), .allMenu .foodPhotos .meal:nth-child(3) {
+  grid-column: span 2;
+}
+.allMenu .foodPhotos .meal:nth-child(5), .allMenu .foodPhotos .meal:nth-child(6) {
+  grid-column: span 3;
+}
+.allMenu .foodPhotos .meal img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.allMenu .foodPhotos .meal .mealCategories {
+  display: flex;
+  align-items: center;
+}
+.allMenu .foodPhotos .meal .mealCategories span {
+  font-family: "Lato", sans-serif;
+  font-size: 18px;
+}
+.allMenu .foodPhotos .meal .mealCategories .circle {
+  font-size: 8px;
+  margin: 0 10px;
+}
+.allMenu .foodPhotos .meal .mealDescription {
+  position: absolute;
+  bottom: 45px;
+  padding: 0 30px;
+  z-index: 2;
+}
+.allMenu .foodPhotos .meal .mealDescription h3 {
+  font-size: 36px;
+  max-width: 500px;
+  margin-bottom: 15px;
+}
+.allMenu .loading {
+  display: flex;
+  justify-content: center;
+}
+.allMenu .loading p {
+  display: inline-block;
+  font-size: 18px;
+  padding: 6px 25px;
+  font-family: "Lato", sans-serif;
+  border: 2px solid black;
+}
+
+@media (max-width: 768px) {
+  header {
+    padding-bottom: 200px;
+  }
+  header .headerContent {
+    margin-bottom: 170px;
+  }
+  header .subheader h1 {
+    font-size: 74px;
+  }
+  .allMenu {
+    padding-top: 75px;
+    padding-bottom: 95px;
+  }
+  .allMenu .menuCategories-wrapper .menuCategories li {
+    font-size: 18px;
+    margin-right: 25px;
+    cursor: pointer;
+  }
+  .allMenu .foodPhotos {
+    gap: 25px;
+  }
+  .allMenu .foodPhotos .meal {
+    max-height: 480px;
+  }
+  .allMenu .foodPhotos .meal:nth-child(1), .allMenu .foodPhotos .meal:nth-child(4) {
+    grid-column: span 3;
+  }
+  .allMenu .foodPhotos .meal:nth-child(2), .allMenu .foodPhotos .meal:nth-child(3) {
+    grid-column: span 3;
+  }
+  .allMenu .foodPhotos .meal .mealCategories .circle {
+    margin: 0 8px;
+  }
+  .allMenu .foodPhotos .meal .mealDescription h3 {
+    font-size: 24px;
+  }
+  .allMenu .foodPhotos .meal .mealDescription .mealCategories {
+    font-size: 16px;
+  }
+}
+@media (max-width: 480px) {
+  header {
+    padding-bottom: 160px;
+  }
+  header .headerContent {
+    margin-bottom: 135px;
+  }
+  header .subheader h1 {
+    font-size: 45px;
+  }
+  .allMenu {
+    padding-top: 75px;
+    padding-bottom: 95px;
+  }
+  .allMenu .menuCategories-wrapper .menuCategories li {
+    font-size: 16px;
+    margin-right: 15px;
+    cursor: pointer;
+  }
+  .allMenu .foodPhotos {
+    gap: 25px;
+  }
+  .allMenu .foodPhotos .meal {
+    height: 480px;
+  }
+  .allMenu .foodPhotos .meal:nth-child(1), .allMenu .foodPhotos .meal:nth-child(4), .allMenu .foodPhotos .meal:nth-child(2), .allMenu .foodPhotos .meal:nth-child(3), .allMenu .foodPhotos .meal:nth-child(5), .allMenu .foodPhotos .meal:nth-child(6) {
+    grid-column: span 6;
+  }
+  .allMenu .foodPhotos .meal .mealCategories .circle {
+    margin: 0 8px;
+  }
+  .allMenu .foodPhotos .meal .mealDescription h3 {
+    font-size: 32px;
+  }
+  .allMenu .foodPhotos .meal .mealDescription .mealCategories {
+    font-size: 18px;
+  }
+}
+@media (max-width: 442px) {
+  .allMenu {
+    padding-top: 75px;
+    padding-bottom: 95px;
+  }
+  .allMenu .menuCategories-wrapper {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 35px;
+    position: relative;
+  }
+  .allMenu .menuCategories-wrapper .menuBurger {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 30px;
+    height: 20px;
+  }
+  .allMenu .menuCategories-wrapper .menuBurger span, .allMenu .menuCategories-wrapper .menuBurger::after, .allMenu .menuCategories-wrapper .menuBurger::before {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: black;
+  }
+  .allMenu .menuCategories-wrapper .menuBurger::after, .allMenu .menuCategories-wrapper .menuBurger::before {
+    content: "";
+    left: 0;
+    transition: 0.4s;
+  }
+  .allMenu .menuCategories-wrapper .menuBurger::after {
+    top: 0px;
+  }
+  .allMenu .menuCategories-wrapper .menuBurger::before {
+    bottom: 0px;
+  }
+  .allMenu .menuCategories-wrapper .menuBurger.activeMenu span {
+    display: none;
+  }
+  .allMenu .menuCategories-wrapper .menuBurger.activeMenu::after {
+    top: 9px;
+    transform: rotate(45deg);
+  }
+  .allMenu .menuCategories-wrapper .menuBurger.activeMenu::before {
+    bottom: 9px;
+    transform: rotate(-45deg);
+  }
+  .allMenu .menuCategories-wrapper .menuCategories {
+    display: block;
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    top: 85%;
+    right: 0;
+    z-index: 5;
+    background-color: #ffffff;
+    border-radius: 5px;
+    padding: 10px 25px;
+    transition: 0.3s;
+  }
+  .allMenu .menuCategories-wrapper .menuCategories li {
+    font-size: 18px;
+    margin-bottom: 15px;
+  }
+  .allMenu .menuCategories-wrapper .menuCategories li:last-child {
+    margin-bottom: 0;
+  }
+  .allMenu .menuCategories-wrapper .activeCategories {
+    top: 200%;
+    opacity: 1;
+    visibility: visible;
+  }
+  .allMenu .foodPhotos {
+    gap: 25px;
+  }
+  .allMenu .foodPhotos .meal {
+    max-height: 480px;
+  }
+  .allMenu .foodPhotos .meal:nth-child(1), .allMenu .foodPhotos .meal:nth-child(4), .allMenu .foodPhotos .meal:nth-child(2), .allMenu .foodPhotos .meal:nth-child(3), .allMenu .foodPhotos .meal:nth-child(5), .allMenu .foodPhotos .meal:nth-child(6) {
+    grid-column: span 6;
+  }
+  .allMenu .foodPhotos .meal .mealCategories .circle {
+    margin: 0 8px;
+  }
+  .allMenu .foodPhotos .meal .mealDescription h3 {
+    font-size: 32px;
+  }
+  .allMenu .foodPhotos .meal .mealDescription .mealCategories {
+    font-size: 18px;
+  }
+}
+@media (max-width: 320px) {
+  header {
+    padding-bottom: 140px;
+  }
+  header .headerContent {
+    margin-bottom: 105px;
+  }
+  header .subheader h1 {
+    font-size: 34px;
+  }
+  .allMenu {
+    padding-top: 65px;
+    padding-bottom: 75px;
+  }
+  .allMenu .menuCategories-wrapper .menuCategories li {
+    font-size: 18px;
+    margin-bottom: 15px;
+    cursor: pointer;
+  }
+  .allMenu .foodPhotos {
+    margin-bottom: 55px;
+    gap: 25px;
+  }
+  .allMenu .foodPhotos .meal {
+    height: 480px;
+  }
+  .allMenu .foodPhotos .meal .mealCategories .circle {
+    margin: 0 8px;
+  }
+  .allMenu .foodPhotos .meal .mealDescription {
+    padding: 0 15px;
+  }
+  .allMenu .foodPhotos .meal .mealDescription h3 {
+    font-size: 26px;
+  }
+  .allMenu .foodPhotos .meal .mealDescription .mealCategories {
+    font-size: 16px;
+  }
+}
+
+/*# sourceMappingURL=portfolio.css.map */

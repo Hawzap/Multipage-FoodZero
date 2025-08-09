@@ -1,0 +1,15 @@
+{
+    "name": "foodzero",
+    "version": "1.0.0",
+    "description": "To make all functions work correctly, start the project with LiveServer plugin",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "sass-watch": "sass --watch ."
+    },
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "sass": "^1.90.0"
+    }
+}

@@ -1,0 +1,227 @@
+footer {
+    color: white;
+    padding: 100px 0 45px 0;
+    background-color: #233000;
+    .footer-firstBlock {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 120px;
+        .siteName {
+            p {
+                font-size: 45px;
+            }
+        }
+        .footerBlock-title {
+            font-weight: 700;
+            font-size: 22px;
+            margin-bottom: 45px;
+        }
+        .footer-contacts {
+            .email {
+                margin-bottom: 22px;
+                margin-top: 3px;
+            }
+            .adress {
+                max-width: 200px;
+                line-height: 24px;
+            }
+        }
+        .leaveMail {
+            form {
+                display: grid;
+                grid-template-columns: minmax(100px, 400px) minmax(75px, 175px);
+                align-items: center;
+                gap: 0 22px;
+                height: 60px;
+                margin-bottom: 15px;
+                input,
+                button {
+                    height: 100%;
+                    background-color: transparent;
+                }
+                input {
+                    width: 100%;
+                    border: 2px solid white;
+                    font-size: 18px;
+                    font-family: "Lato", sans-serif;
+                    color: white;
+                    padding-left: 20px;
+                    &::placeholder {
+                        font-size: 18px;
+                        font-family: "Lato", sans-serif;
+                        color: white;
+                    }
+                }
+                button {
+                    width: 100%;
+                    border: none;
+                    color: white;
+                    font-size: 22px;
+                    font-weight: 700;
+                    background-color: #5e6600;
+                }
+            }
+            .joiningText {
+                font-family: "Lato", sans-serif;
+                font-size: 12px;
+            }
+        }
+    }
+    .line {
+        border: 2px dashed white;
+        margin-bottom: 40px;
+    }
+    .footer-secondBlock {
+        display: flex;
+        justify-content: space-between;
+        .rights {
+            font-family: "Lato", sans-serif;
+            font-size: 18px;
+        }
+        .socials {
+            display: flex;
+            a {
+                margin-right: 18px;
+                &:last-child {
+                    margin-right: 0;
+                }
+            }
+            img {
+                filter: invert(100%);
+                width: 30px;
+                height: 30px;
+            }
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+    footer {
+        .footer-firstBlock {
+            .siteName {
+                max-width: 155px;
+            }
+            .footerBlock-title {
+                margin-bottom: 25px;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    footer {
+        padding: 85px 0 45px 0;
+        .footer-firstBlock {
+            justify-content: space-evenly;
+            .siteName {
+                max-width: 115px;
+            }
+            .footerBlock-title {
+                margin-bottom: 20px;
+            }
+
+            .leaveMail {
+                width: 100%;
+                margin-top: 45px;
+                form {
+                    grid-template-columns: minmax(100px, 2.5fr) minmax(
+                            75px,
+                            1fr
+                        );
+                }
+            }
+        }
+    }
+}
+@media (max-width: 480px) {
+    footer {
+        .footer-firstBlock {
+            justify-content: space-between;
+            margin-bottom: 95px;
+
+            .footer-contacts {
+                p {
+                    width: fit-content;
+                }
+                .adress {
+                    max-width: 166px;
+                    line-height: 24px;
+                }
+            }
+            .leaveMail {
+                margin-top: 45px;
+                form {
+                    grid-template-columns: 175px 1fr;
+                    gap: 25px 0;
+                    height: auto;
+                    margin-bottom: 15px;
+                    input,
+                    button {
+                        height: 60px;
+                    }
+                    input {
+                        grid-column: span 2;
+                    }
+                }
+            }
+        }
+
+        .footer-secondBlock {
+            .rights {
+                max-width: 245px;
+                font-size: 16px;
+            }
+            .socials {
+                a {
+                    margin-right: 15px;
+                }
+                img {
+                    width: 25px;
+                    height: 25px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 320px) {
+    footer {
+        padding: 75px 0 45px 0;
+        .footer-firstBlock {
+            flex-direction: column;
+            justify-content: center;
+            .siteName {
+                margin-bottom: 35px;
+            }
+            .footer-contacts {
+                p {
+                    text-align: center;
+                    width: auto;
+                }
+            }
+            .leaveMail {
+                margin-top: 65px;
+            }
+        }
+        .footer-secondBlock {
+            flex-direction: column;
+            align-items: center;
+            .rights {
+                max-width: none;
+                font-size: 17px;
+                margin-bottom: 25px;
+            }
+            .socials {
+                a {
+                    margin-right: 20px;
+                }
+                img {
+                    width: 30px;
+                    height: 30px;
+                }
+            }
+        }
+    }
+}

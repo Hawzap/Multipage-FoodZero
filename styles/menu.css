@@ -1,0 +1,328 @@
+header {
+  display: block;
+  background-image: url(../images/menu/menuHeaderBg.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  margin: 0;
+  padding-bottom: 230px;
+}
+header .headerContent {
+  margin-bottom: 150px;
+}
+header .subheader h1 {
+  font-size: 95px;
+  max-width: 500px;
+  font-weight: 700;
+  margin-bottom: 25px;
+}
+header .subheader p {
+  font-size: 20px;
+}
+
+.meals {
+  padding-top: 85px;
+  padding-bottom: 250px;
+  position: relative;
+}
+.meals::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: block;
+  width: 500px;
+  height: 290px;
+  background-image: url(../icons/blueberry.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.meal {
+  margin-bottom: 225px;
+}
+.meal:last-child {
+  margin-bottom: 0;
+}
+.meal .mealTitle,
+.meal .mealDescription {
+  text-align: center;
+}
+.meal .mealTitle {
+  font-size: 80px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+.meal .mealTitleWrapper {
+  position: relative;
+}
+.meal .mealTitleWrapper::before {
+  content: "";
+  position: absolute;
+  top: -60px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: block;
+  width: 265px;
+  height: 265px;
+  background-image: url(../icons/avocado.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.meal .mealDescription {
+  font-size: 18px;
+  font-family: "Lato", sans-serif;
+  color: #4d4d4d;
+  margin-bottom: 95px;
+}
+.meal .food {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.meal .food .foodPhoto {
+  width: 40%;
+}
+.meal .food .foodPhoto img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+.meal .food .foodList {
+  width: 41%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.meal .food .foodList .item {
+  width: 100%;
+}
+.meal .food .foodList .item .price {
+  display: flex;
+  justify-content: flex-end;
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 7px;
+}
+.meal .food .foodList .item .line {
+  width: 100%;
+  border: 2px dashed black;
+  margin-bottom: 24px;
+}
+.meal .food .foodList .item .item-name {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+.meal .food .foodList .item .item-description {
+  font-size: 18px;
+  font-family: "Lato", sans-serif;
+  color: #4d4d4d;
+}
+.meal .reversedFood {
+  flex-direction: row-reverse;
+}
+
+.makingReservation {
+  padding: 150px 0;
+  background-color: #ebf0e4;
+}
+.makingReservation .reservationTitle {
+  margin-bottom: 100px;
+}
+.makingReservation .reservationTitle h2 {
+  text-align: center;
+  font-size: 75px;
+  margin-bottom: 5px;
+}
+.makingReservation .reservationTitle p {
+  text-align: center;
+  font-size: 20px;
+  font-family: "Lato", sans-serif;
+  color: #4d4d4d;
+}
+.makingReservation .reservation .reservationForms {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 80px;
+}
+.makingReservation .reservation .reservationForms .fieldWrapper {
+  position: relative;
+  width: calc(33.3333333333% - 40px);
+  height: 75px;
+}
+.makingReservation .reservation .reservationForms .fieldWrapper .fieldBorder {
+  display: block;
+  position: absolute;
+  z-index: 10;
+}
+.makingReservation .reservation .reservationForms .fieldWrapper .fieldBorder.top, .makingReservation .reservation .reservationForms .fieldWrapper .fieldBorder.bottom {
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: black;
+}
+.makingReservation .reservation .reservationForms .fieldWrapper .fieldBorder.top {
+  top: 0;
+  transform-origin: left;
+}
+.makingReservation .reservation .reservationForms .fieldWrapper .fieldBorder.bottom {
+  bottom: 0;
+  transform-origin: right;
+}
+.makingReservation .reservation .reservationForms .fieldWrapper .fieldBorder.left, .makingReservation .reservation .reservationForms .fieldWrapper .fieldBorder.right {
+  top: 0;
+  width: 2px;
+  height: 100%;
+  background-color: black;
+}
+.makingReservation .reservation .reservationForms .fieldWrapper .fieldBorder.left {
+  left: 0;
+  transform-origin: bottom;
+}
+.makingReservation .reservation .reservationForms .fieldWrapper .fieldBorder.right {
+  right: 0;
+  transform-origin: top;
+}
+.makingReservation .reservation .reservationForms .selectDate,
+.makingReservation .reservation .reservationForms .selectTime,
+.makingReservation .reservation .reservationForms .persoNumber {
+  width: 100%;
+  height: 100%;
+  padding: 0 20px;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  font-family: "Lato", sans-serif;
+}
+.makingReservation .reservation .booking {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 220px;
+  height: 60px;
+  color: white;
+  font-size: 20px;
+  background-color: #233000;
+  border: none;
+  margin: 0 auto;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  header {
+    padding-bottom: 195px;
+  }
+  header .headerContent {
+    margin-bottom: 150px;
+  }
+  header .subheader h1 {
+    font-size: 93px;
+    max-width: 100%;
+    text-align: center;
+  }
+  header .subheader p {
+    text-align: center;
+  }
+  .meals {
+    padding-bottom: 150px;
+  }
+  .meals::after {
+    width: 240px;
+    height: 186px;
+  }
+  .meal {
+    margin-bottom: 175px;
+  }
+  .meal .mealTitle {
+    font-size: 75px;
+  }
+  .meal .bgImg::before {
+    width: 235px;
+    height: 235px;
+  }
+  .meal .mealDescription {
+    font-size: 18px;
+    font-family: "Lato", sans-serif;
+    color: #4d4d4d;
+    margin-bottom: 95px;
+  }
+  .meal .food .foodList .item {
+    margin-bottom: 20px;
+  }
+  .meal .food .foodList .item .price {
+    font-size: 25px;
+  }
+  .meal .food .foodList .item .item-name {
+    font-size: 35px;
+    margin-bottom: 10px;
+  }
+  .meal .food .foodList .item .item-description {
+    font-size: 16px;
+  }
+}
+@media (max-width: 480px) {
+  header {
+    padding-bottom: 150px;
+  }
+  header .headerContent {
+    margin-bottom: 120px;
+  }
+  header .subheader h1 {
+    font-size: 75px;
+  }
+  header .subheader p {
+    font-size: 18px;
+  }
+  .meals {
+    padding-bottom: 150px;
+  }
+  .meals::after {
+    width: 240px;
+    height: 186px;
+  }
+  .meal {
+    margin-bottom: 175px;
+  }
+  .meal .mealTitle {
+    font-size: 65px;
+  }
+  .meal .bgImg::before {
+    width: 235px;
+    height: 235px;
+  }
+  .meal .mealDescription {
+    font-size: 18px;
+    font-family: "Lato", sans-serif;
+    color: #4d4d4d;
+    margin-bottom: 95px;
+  }
+  .meal .food {
+    flex-direction: column-reverse;
+  }
+  .meal .food .foodPhotoWrapper {
+    max-width: unset;
+    width: 100%;
+    height: 300px;
+  }
+  .meal .food .foodList {
+    width: 80%;
+    margin-bottom: 60px;
+  }
+  .meal .food .foodList .item {
+    margin-bottom: 55px;
+  }
+  .meal .food .foodList .item .price {
+    font-size: 25px;
+  }
+  .meal .food .foodList .item .item-name {
+    font-size: 35px;
+    margin-bottom: 10px;
+  }
+  .meal .food .foodList .item .item-description {
+    font-size: 16px;
+  }
+}
+
+/*# sourceMappingURL=menu.css.map */
