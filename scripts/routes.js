@@ -26,7 +26,7 @@ links.forEach((e) => {
             (el) => el.linkTitle == linkItem.textContent.toLowerCase()
         );
         const hrefName = linksWay[hrefIndex].href;
-        linkItem.href = `http://127.0.0.1:5500/${hrefName}${
+        linkItem.href = `${window.location.origin}/${hrefName}${
             hrefName ? ".html" : ""
         }`;
     }
