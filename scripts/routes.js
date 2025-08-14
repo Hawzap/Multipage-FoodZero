@@ -9,7 +9,7 @@ const linksWay = [
     { linkTitle: "portfolio", href: "portfolio" },
     { linkTitle: "contact", href: "getInTouch" },
 ];
-const pageLocation = window.location.pathname.split("/")[1].slice(0, -5);
+const pageLocation = window.location.href.split("/")[4].slice(0, -5);
 const linkIndex = linksWay.findIndex((e) => e.href == pageLocation);
 const burgerMenu = document.querySelector(".burgerMenu");
 const routes = document.querySelector(".routes");
