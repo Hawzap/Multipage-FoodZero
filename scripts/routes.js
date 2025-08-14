@@ -26,12 +26,9 @@ links.forEach((e) => {
             (el) => el.linkTitle == linkItem.textContent.toLowerCase()
         );
         const hrefName = linksWay[hrefIndex].href;
-        const splitedUrl = window.location.href.split("/");
-        splitedUrl[splitedUrl.length - 1] = `${hrefName}${
+        linkItem.href = `https://hawzap.github.io/Multipage-FoodZero/${hrefName}${
             hrefName ? ".html" : ""
         }`;
-        const newUrl = splitedUrl.join("/");
-        linkItem.href = newUrl;
     }
     if (!(linkIndex == 0) && !linksWay[linkIndex]) return;
     if (link == linksWay[linkIndex].linkTitle) {
