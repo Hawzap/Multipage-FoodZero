@@ -26,9 +26,12 @@ links.forEach((e) => {
             (el) => el.linkTitle == linkItem.textContent.toLowerCase()
         );
         const hrefName = linksWay[hrefIndex].href;
-        linkItem.href = `${window.location.origin}/${hrefName}${
+        const splitedUrl = window.location.href.split("/");
+        splitedUrl[splitedUrl.length - 1] = `${hrefName}${
             hrefName ? ".html" : ""
         }`;
+        const newUrl = splitedUrl.join("/");
+        linkItem.href = newUrl;
     }
     if (!(linkIndex == 0) && !linksWay[linkIndex]) return;
     if (link == linksWay[linkIndex].linkTitle) {
